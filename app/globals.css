@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+:root {
+  --bg-base: #0a0a0a;
+  --bg-raised: #111111;
+  --bg-overlay: #1a1a1a;
+  --border: #1f1f1f;
+  --text-primary: #ededed;
+  --text-secondary: #a1a1a1;
+  --text-tertiary: #6b6b6b;
+  --accent: #00ff88;
+  --accent-dim: rgba(0, 255, 136, 0.15);
+  --danger: #ff0055;
+}
+
+@theme inline {
+  --color-bg-base: var(--bg-base);
+  --color-bg-raised: var(--bg-raised);
+  --color-bg-overlay: var(--bg-overlay);
+  --color-border: var(--border);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+  --color-accent: var(--accent);
+  --color-accent-dim: var(--accent-dim);
+  --color-danger: var(--danger);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: auto;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  html {
+    cursor: none;
+  }
+}
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+a,
+button {
+  color: inherit;
+}
+
+/* ─── Glitch animation ─────────────────────────────────────── */
+@keyframes glitch-clip-1 {
+  0%   { clip-path: inset(25% 0 55% 0); transform: translate(-4px, 1px); }
+  20%  { clip-path: inset(55% 0 15% 0); transform: translate(4px, -1px); }
+  40%  { clip-path: inset(10% 0 75% 0); transform: translate(-2px, 2px); }
+  60%  { clip-path: inset(40% 0 35% 0); transform: translate(3px, -2px); }
+  80%  { clip-path: inset(75% 0 5% 0);  transform: translate(-3px, 1px); }
+  100% { clip-path: inset(25% 0 55% 0); transform: translate(-4px, 1px); }
+}
+
+@keyframes glitch-clip-2 {
+  0%   { clip-path: inset(60% 0 10% 0); transform: translate(4px, -1px); }
+  20%  { clip-path: inset(10% 0 60% 0); transform: translate(-4px, 1px); }
+  40%  { clip-path: inset(70% 0 20% 0); transform: translate(2px, -2px); }
+  60%  { clip-path: inset(20% 0 65% 0); transform: translate(-3px, 2px); }
+  80%  { clip-path: inset(5% 0 85% 0);  transform: translate(3px, -1px); }
+  100% { clip-path: inset(60% 0 10% 0); transform: translate(4px, -1px); }
+}
+
+.glitch-active {
+  position: relative;
+  display: inline-block;
+}
+
+.glitch-active::before,
+.glitch-active::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch-active::before {
+  color: var(--accent);
+  animation: glitch-clip-1 0.25s steps(1) infinite;
+}
+
+.glitch-active::after {
+  color: var(--danger);
+  animation: glitch-clip-2 0.25s steps(1) infinite;
+}
+
+/* ─── Scroll indicator ─────────────────────────────────────── */
+@keyframes scroll-bounce {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50%       { transform: translateY(6px); opacity: 0.4; }
+}
+
+/* ─── Cursor blink ─────────────────────────────────────────── */
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glitch-active::before,
+  .glitch-active::after {
+    display: none;
+  }
+}
