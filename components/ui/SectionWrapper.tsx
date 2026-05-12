@@ -45,7 +45,7 @@ export function SectionWrapper({
       ref={ref}
       className={`min-h-screen py-24 ${className}`}
     >
-      <div className="max-w-[1280px] mx-auto px-6 sm:px-10 lg:px-16">
+      <div className="mx-auto w-full max-w-5xl px-6 lg:px-8 xl:max-w-6xl">
         {/* Section header */}
         <div className="mb-16 lg:mb-20">
           <div className="font-mono text-xs text-[var(--text-tertiary)] tracking-widest mb-3 h-4">
