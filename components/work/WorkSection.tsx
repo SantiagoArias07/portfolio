@@ -193,7 +193,7 @@ export function WorkSection() {
           <h2 className="text-[clamp(2rem,5vw,4rem)] font-bold leading-none tracking-tight text-[var(--text-primary)]">
             Selected
             <br />
-            <span className="text-[var(--accent)]">work.</span>
+            <span className="text-[var(--text-primary)]">work.</span>
           </h2>
         </div>
 

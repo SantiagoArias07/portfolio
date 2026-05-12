@@ -66,11 +66,18 @@ export function HackathonsSection() {
           <h2 className="text-[clamp(2rem,5vw,4rem)] font-bold leading-none tracking-tight text-[var(--text-primary)]">
             Competitions &amp;
             <br />
-            <span className="text-[var(--accent)]">achievements.</span>
+            <span className="text-[var(--text-primary)]">achievements.</span>
           </h2>
         </div>
 
-        <div className="border-t border-[var(--border)]">
+        {/* Vertical timeline connector */}
+        <div className="relative border-t border-[var(--border)]">
+          <div
+            className="absolute left-[44px] sm:left-[50px] top-0 bottom-0 w-px"
+            style={{ backgroundColor: "var(--border)" }}
+            aria-hidden
+          />
+
           {achievements.map((item, i) => (
             <motion.div
               key={item.id}
@@ -78,8 +85,15 @@ export function HackathonsSection() {
               variants={rowVariants}
               initial={reduced ? "show" : "hidden"}
               animate={inView ? "show" : "hidden"}
-              className="group grid grid-cols-[80px_1fr] sm:grid-cols-[100px_1fr_180px] gap-x-8 gap-y-1 py-6 border-b border-[var(--border)] transition-colors hover:bg-[var(--bg-raised)] -mx-2 px-2 rounded"
+              className="group grid grid-cols-[80px_1fr] sm:grid-cols-[100px_1fr_180px] gap-x-8 gap-y-1 py-6 border-b border-[var(--border)] transition-colors hover:bg-[var(--bg-raised)] relative"
             >
+              {/* Accent dot sitting on the vertical line */}
+              <span
+                className="absolute left-[44px] sm:left-[50px] top-[1.65rem] -translate-x-1/2 w-[5px] h-[5px] rounded-full pointer-events-none"
+                style={{ backgroundColor: "var(--accent)" }}
+                aria-hidden
+              />
+
               <div className="font-mono text-xs text-[var(--text-tertiary)] tabular-nums pt-0.5">
                 {item.date}
               </div>
@@ -101,5 +115,6 @@ export function HackathonsSection() {
         </div>
       </div>
     </SectionWrapper>
+
   );
 }

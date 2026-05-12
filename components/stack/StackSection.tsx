@@ -78,7 +78,7 @@ export function StackSection() {
           <h2 className="text-[clamp(2rem,5vw,4rem)] font-bold leading-none tracking-tight text-[var(--text-primary)]">
             Tools I trust
             <br />
-            <span className="text-[var(--accent)]">in production.</span>
+            <span className="text-[var(--text-primary)]">in production.</span>
           </h2>
         </div>
 

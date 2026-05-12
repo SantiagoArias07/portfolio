@@ -6,10 +6,17 @@ import { useReducedMotion } from "@/lib/hooks/useReducedMotion";
 type Variant = "default" | "hover" | "crosshair" | "label";
 
 const sizes: Record<Variant, number> = {
-  default: 10,
-  hover: 36,
-  crosshair: 44,
-  label: 80,
+  default: 8,
+  hover: 24,
+  crosshair: 36,
+  label: 72,
+};
+
+const opacities: Record<Variant, number> = {
+  default: 0.4,
+  hover: 0.6,
+  crosshair: 0.7,
+  label: 0.8,
 };
 
 export function CustomCursor() {
@@ -70,12 +77,13 @@ export function CustomCursor() {
   if (reduced || isTouch) return null;
 
   const size = sizes[variant];
+  const opacity = opacities[variant];
 
   return (
     <motion.div
       className="fixed top-0 left-0 z-[9999] pointer-events-none mix-blend-difference"
       style={{ x, y, translateX: "-50%", translateY: "-50%" }}
-      animate={{ opacity: visible ? 1 : 0 }}
+      animate={{ opacity: visible ? opacity : 0 }}
       transition={{ opacity: { duration: 0.15 } }}
       aria-hidden
     >
