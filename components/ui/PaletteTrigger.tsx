@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Command } from "lucide-react";
 import { useReducedMotion } from "@/lib/hooks/useReducedMotion";
 
 export function PaletteTrigger() {
@@ -22,7 +21,7 @@ export function PaletteTrigger() {
       type="button"
       aria-label="Open command palette"
       onClick={openPalette}
-      className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 inline-flex items-center gap-2 select-none group"
+      className="fixed bottom-14 right-4 md:bottom-16 md:right-6 z-50 inline-flex items-center select-none"
       style={{
         padding: "0.5rem 0.75rem",
         background: "rgba(17, 17, 17, 0.8)",
@@ -71,12 +70,6 @@ export function PaletteTrigger() {
         el.style.transform = "translateY(0)";
       }}
     >
-      <Command
-        size={14}
-        aria-hidden
-        style={{ color: "var(--text-secondary)", transition, flexShrink: 0 }}
-        className="group-hover:!text-[var(--accent)]"
-      />
       <span
         style={{
           fontFamily: "var(--font-geist-mono)",
@@ -85,7 +78,6 @@ export function PaletteTrigger() {
           color: "var(--text-secondary)",
           transition,
         }}
-        className="group-hover:!text-[var(--text-primary)]"
       >
         {isMac ? "⌘K" : "Ctrl K"}
       </span>
