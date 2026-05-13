@@ -5,6 +5,7 @@ import { LenisProvider } from "@/components/ui/LenisProvider";
 import { CustomCursor } from "@/components/ui/CustomCursor";
 import { HUD } from "@/components/ui/HUD";
 import { CommandPalette } from "@/components/ui/CommandPalette";
+import { PaletteTrigger } from "@/components/ui/PaletteTrigger";
 import { ConsoleSignature } from "@/components/ui/ConsoleSignature";
 
 const geistSans = Geist({
@@ -95,6 +96,7 @@ export default function RootLayout({
           <CustomCursor />
           <HUD />
           <CommandPalette />
+          <PaletteTrigger />
           <ConsoleSignature />
           {children}
         </LenisProvider>
