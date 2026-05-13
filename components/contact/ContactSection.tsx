@@ -51,7 +51,7 @@ export function ContactSection() {
             <span className="text-[var(--accent)]">something.</span>
           </h2>
           <p className="text-[var(--text-secondary)] max-w-lg leading-relaxed">
-            I&apos;m actively looking for full-stack roles and interesting
+            I&apos;m actively looking for software engineering roles and interesting
             collaborations. If you&apos;re building something ambitious, let&apos;s talk.
           </p>
         </motion.div>

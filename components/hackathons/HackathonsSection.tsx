@@ -34,6 +34,16 @@ const achievements: Achievement[] = [
   },
   {
     id: "ach-2",
+    date: "2025.07.16",
+    title: "Technical Diploma in Programming",
+    context: "Completed a specialized technical program focused on software (Python, C, C++, Java, PHP, SQL, HTML/CSS/JS).",
+    result: "Certified",
+    links: [
+      { label: "cetis15.com ↗", url: "https://www.cetis15.edu.mx" },
+    ],
+  },
+  {
+    id: "ach-3",
     date: "2025.05.15",
     title: "Gen Técnico 2025",
     context: "Hackathon organized by Tenaris TAMSA. Awarded as part of the Beca Roberto Rocca program.",
@@ -43,7 +53,7 @@ const achievements: Achievement[] = [
     ],
   },
   {
-    id: "ach-3",
+    id: "ach-4",
     date: "2024.05.15",
     title: "Gen Técnico 2024",
     context: "Hackathon organized by Tenaris TAMSA. Awarded as part of the Beca Roberto Rocca program.",
@@ -53,10 +63,10 @@ const achievements: Achievement[] = [
     ],
   },
   {
-    id: "ach-4",
-    date: "2023",
+    id: "ach-5",
+    date: "2024.02.17",
     title: "Programming Certification",
-    context: "Computación del Golfo — competitive programming certification.",
+    context: "Computación del Golfo — software engineering and programming certification.",
     result: "Certified",
     links: [
       { label: "cg.edu.mx ↗", url: "https://www.cg.edu.mx" },

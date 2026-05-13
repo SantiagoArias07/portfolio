@@ -87,20 +87,48 @@ function ProjectCard({
       data-cursor="crosshair"
       aria-label={`Project: ${project.name}`}
     >
-      {/* Project preview image */}
-      <div
-        className="relative w-full overflow-hidden border-b border-[var(--border)]"
-        style={{ aspectRatio: "16 / 9", backgroundColor: project.previewBg ?? "var(--bg-overlay)" }}
-      >
-        <Image
-          src={projectImages[project.id]}
-          alt={`${project.name} preview`}
-          fill
-          className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 80vw, 72rem"
-          priority={index === 0}
-        />
-      </div>
+      {/* Project preview image — click opens live site */}
+      {project.deployUrl ? (
+        <a
+          href={project.deployUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Visit ${project.name} live site`}
+          data-cursor="crosshair"
+          className="relative block w-full overflow-hidden border-b border-[var(--border)]"
+          style={{ aspectRatio: "16 / 9", backgroundColor: project.previewBg ?? "var(--bg-overlay)" }}
+        >
+          <Image
+            src={projectImages[project.id]}
+            alt={`${project.name} preview`}
+            fill
+            className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 80vw, 72rem"
+            priority={index === 0}
+          />
+          {/* Hover overlay */}
+          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+            style={{ background: "rgba(0,0,0,0.45)" }}>
+            <span className="font-mono text-xs tracking-widest text-[var(--accent)] border border-[var(--accent)] px-3 py-1.5 rounded">
+              VISIT ↗
+            </span>
+          </div>
+        </a>
+      ) : (
+        <div
+          className="relative w-full overflow-hidden border-b border-[var(--border)]"
+          style={{ aspectRatio: "16 / 9", backgroundColor: project.previewBg ?? "var(--bg-overlay)" }}
+        >
+          <Image
+            src={projectImages[project.id]}
+            alt={`${project.name} preview`}
+            fill
+            className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 80vw, 72rem"
+            priority={index === 0}
+          />
+        </div>
+      )}
 
       <div className="p-8">
         {/* Meta */}

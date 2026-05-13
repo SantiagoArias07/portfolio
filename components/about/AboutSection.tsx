@@ -54,25 +54,14 @@ export function AboutSection() {
             className="text-lg sm:text-xl text-[var(--text-secondary)] leading-relaxed mb-6 font-light"
             variants={fadeUp}
           >
-            I&apos;m Santiago — a Computer Science and Technology student at Tec de
-            Monterrey who builds full-stack products end to end. I care about
-            the 200ms that makes a transition feel right, the API design that
-            makes a codebase survivable, and the product decision that makes
-            both matter.
+            I&apos;m Santiago — a Computer Science and Technology student at Tec de Monterrey focused on software engineering with a strong emphasis on frontend craft. I care about the 200ms that makes a transition feel right, the API design that makes a codebase survivable, and the product decision that makes both matter.
           </motion.p>
 
           <motion.p
             className="text-[var(--text-secondary)] leading-relaxed mb-6"
             variants={fadeUp}
           >
-            I work across the full stack — TypeScript and React on the client,
-            Node.js and Express on the server, SQLite or Postgres for
-            persistence. I also write Python for algorithms and scripting, C++
-            for competitive programming, and Java when the problem calls for it.
-            I reach for Three.js and GSAP when something needs to move in a way
-            that stops people mid-scroll. I think in systems: a design token is
-            a contract, a component is a promise, and a millisecond of jank is a
-            broken one.
+            I build modern web interfaces using TypeScript and React, focusing on performance, clarity, and user experience. I regularly integrate APIs and design backend interactions that keep systems maintainable and predictable, working with Node.js, Express, and relational databases when needed. I also write Python for algorithms and scripting, C++ for competitive programming, and Java when the problem calls for it. I reach for Three.js and GSAP when something needs to move in a way that stops people mid-scroll. I think in systems: a design token is a contract, a component is a promise, and a millisecond of jank is a broken one.
           </motion.p>
 
           <motion.p
@@ -87,7 +76,7 @@ export function AboutSection() {
               Fundación Gallagher scholarship
             </span>
             , one of the most selective merit awards in Mexico. Currently
-            looking for a full-stack role where craft and ambition are both on
+            looking for a software engineering role where craft and ambition are both on
             the table.
           </motion.p>
         </div>

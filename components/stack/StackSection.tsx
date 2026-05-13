@@ -37,7 +37,7 @@ const stack: StackCategory[] = [
     ],
   },
   {
-    label: "Backend",
+    label: "Application & database",
     items: [
       { name: "Node.js + Express", context: "REST APIs and server-side logic" },
       { name: "SQLite", context: "embedded persistent storage, zero-config" },
