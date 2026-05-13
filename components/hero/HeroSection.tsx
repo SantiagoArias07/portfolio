@@ -85,7 +85,7 @@ export function HeroSection() {
           className="font-mono text-sm sm:text-base text-[var(--text-secondary)] tracking-widest"
           variants={fadeUp}
         >
-          Frontend Engineer&nbsp;&nbsp;/&nbsp;&nbsp;Tec de Monterrey &apos;27
+          Full-stack Engineer&nbsp;&nbsp;/&nbsp;&nbsp;Tec de Monterrey
         </motion.p>
 
         {/* Accent line */}

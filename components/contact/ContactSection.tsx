@@ -5,10 +5,9 @@ import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { useReducedMotion } from "@/lib/hooks/useReducedMotion";
 import { EASE_OUT } from "@/lib/animations";
 
-const EMAIL = "taek1701@gmail.com";
+const EMAIL = "santiago.ariasp.dev@gmail.com";
 const GITHUB = "https://github.com/SantiagoArias07";
-// TODO: Replace with actual LinkedIn URL
-const LINKEDIN = "https://linkedin.com/in/santiago-arias-paul";
+const LINKEDIN = "https://www.linkedin.com/in/santiago-arias-paul-49992b2b0/";
 // TODO: Add CV PDF to /public and update this path
 const CV_PATH = "/cv.pdf";
 
@@ -52,7 +51,7 @@ export function ContactSection() {
             <span className="text-[var(--accent)]">something.</span>
           </h2>
           <p className="text-[var(--text-secondary)] max-w-lg leading-relaxed">
-            I&apos;m actively looking for frontend roles and interesting
+            I&apos;m actively looking for full-stack roles and interesting
             collaborations. If you&apos;re building something ambitious, let&apos;s talk.
           </p>
         </motion.div>

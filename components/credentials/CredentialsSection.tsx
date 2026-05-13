@@ -14,20 +14,24 @@ interface Credential {
   year: string;
   status: string;
   tag: string;
+  link: string;
+  linkLabel: string;
 }
 
 const credentials: Credential[] = [
   {
     id: "gallagher",
-    title: "Fundación Gallagher",
+    title: "Gallagher Foundation",
     org: "Scholarship",
     description:
-      "Mexico's most competitive merit-based scholarship, awarded to students who demonstrate exceptional academic performance, leadership, and community commitment across all universities in the country.",
+      "One of Mexico's most selective merit-based scholarships, awarded to students at Tecnológico de Monterrey who demonstrate exceptional academic performance, leadership, and community commitment.",
     detail:
-      "One of fewer than 50 scholars selected nationally each year from thousands of applicants. Covers full tuition and provides ongoing mentorship from business leaders.",
-    year: "2024",
+      "5 scholars selected per year in Mexico — exclusively at Tec de Monterrey Campus Monterrey. The scholarship operates in 3 countries and provides full tuition coverage plus ongoing mentorship from leaders.",
+    year: "2025",
     status: "Active",
     tag: "SCHOLARSHIP",
+    link: "https://gallagherfoundation.org",
+    linkLabel: "gallagherfoundation.org ↗",
   },
   {
     id: "codex",
@@ -37,9 +41,11 @@ const credentials: Credential[] = [
       "High-performance competitive programming program at Tec de Monterrey, training elite students in algorithms, data structures, and problem-solving under contest conditions.",
     detail:
       "Rigorous weekly training sessions in competitive programming — ICPC-style problems, optimization challenges, and algorithmic thinking applied to real engineering constraints.",
-    year: "2024",
+    year: "2025",
     status: "Active",
     tag: "PROGRAM",
+    link: "https://www.instagram.com/p/DNW4lJis5nT/",
+    linkLabel: "INSTAGRAM ↗",
   },
 ];
 
@@ -113,9 +119,19 @@ export function CredentialsSection() {
                 {cred.description}
               </p>
 
-              <p className="text-[var(--text-tertiary)] text-xs leading-relaxed font-mono border-t border-[var(--border)] pt-4">
+              <p className="text-[var(--text-tertiary)] text-xs leading-relaxed font-mono border-t border-[var(--border)] pt-4 mb-4">
                 {cred.detail}
               </p>
+
+              <a
+                href={cred.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-mono text-[10px] text-[var(--accent)] hover:text-[var(--text-primary)] transition-colors tracking-widest"
+                data-cursor="hover"
+              >
+                {cred.linkLabel}
+              </a>
 
               {/* Accent corner glow */}
               <div

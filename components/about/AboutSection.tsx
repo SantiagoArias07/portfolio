@@ -18,9 +18,9 @@ const stagger: Variants = {
 
 const META = [
   { label: "LOCATION", value: "Monterrey, MX" },
-  { label: "PROGRAM", value: "Computer Technologies Eng." },
+  { label: "PROGRAM", value: "B.S. in Computer Science and Technology" },
   { label: "INSTITUTION", value: "Tec de Monterrey" },
-  { label: "GRADUATION", value: "2027 (expected)" },
+  { label: "GRADUATION", value: "2029 (expected)" },
   { label: "STATUS", value: "Open to opportunities" },
   { label: "LANGUAGES", value: "ES / EN" },
 ];
@@ -54,37 +54,41 @@ export function AboutSection() {
             className="text-lg sm:text-xl text-[var(--text-secondary)] leading-relaxed mb-6 font-light"
             variants={fadeUp}
           >
-            I&apos;m Santiago — a Computer Technologies Engineering student at Tec de
-            Monterrey with a fixation on the space between design and
-            engineering. I care about the 200ms that makes a transition feel
-            right, the spacing that makes a layout breathe, and the interaction
-            that makes a user smile.
+            I&apos;m Santiago — a Computer Science and Technology student at Tec de
+            Monterrey who builds full-stack products end to end. I care about
+            the 200ms that makes a transition feel right, the API design that
+            makes a codebase survivable, and the product decision that makes
+            both matter.
           </motion.p>
 
           <motion.p
             className="text-[var(--text-secondary)] leading-relaxed mb-6"
             variants={fadeUp}
           >
-            My stack is TypeScript-first — Next.js, React, and Tailwind for
-            production interfaces; Three.js and GSAP when something needs to
-            move in a way that stops people mid-scroll. I think in systems: a
-            design token is a contract, a component is a promise, and a
-            millisecond of jank is a broken one.
+            I work across the full stack — TypeScript and React on the client,
+            Node.js and Express on the server, SQLite or Postgres for
+            persistence. I also write Python for algorithms and scripting, C++
+            for competitive programming, and Java when the problem calls for it.
+            I reach for Three.js and GSAP when something needs to move in a way
+            that stops people mid-scroll. I think in systems: a design token is
+            a contract, a component is a promise, and a millisecond of jank is a
+            broken one.
           </motion.p>
 
           <motion.p
             className="text-[var(--text-secondary)] leading-relaxed"
             variants={fadeUp}
           >
-            Outside the codebase I compete in hackathons, solve competitive
-            programming problems through{" "}
+            Outside the codebase I compete in hackathons, train in competitive
+            programming through{" "}
             <span className="text-[var(--text-primary)] font-medium">CODEX</span> —
             Tec&apos;s high-performance programming program — and hold the{" "}
             <span className="text-[var(--text-primary)] font-medium">
               Fundación Gallagher scholarship
             </span>
-            , Mexico&apos;s most competitive merit award. Currently looking for
-            a frontend role where craft and ambition are both on the table.
+            , one of the most selective merit awards in Mexico. Currently
+            looking for a full-stack role where craft and ambition are both on
+            the table.
           </motion.p>
         </div>
 

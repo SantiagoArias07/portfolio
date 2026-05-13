@@ -2,6 +2,12 @@
 import { useEffect, useRef } from "react";
 import Lenis from "lenis";
 
+declare global {
+  interface Window {
+    __lenis?: Lenis;
+  }
+}
+
 export function LenisProvider({ children }: { children: React.ReactNode }) {
   const lenisRef = useRef<Lenis | null>(null);
 
@@ -17,6 +23,7 @@ export function LenisProvider({ children }: { children: React.ReactNode }) {
     });
 
     lenisRef.current = lenis;
+    window.__lenis = lenis;
 
     let raf: number;
     function tick(time: number) {
@@ -28,6 +35,7 @@ export function LenisProvider({ children }: { children: React.ReactNode }) {
     return () => {
       cancelAnimationFrame(raf);
       lenis.destroy();
+      delete window.__lenis;
     };
   }, []);
 

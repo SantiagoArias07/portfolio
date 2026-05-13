@@ -4,6 +4,7 @@ import "./globals.css";
 import { LenisProvider } from "@/components/ui/LenisProvider";
 import { CustomCursor } from "@/components/ui/CustomCursor";
 import { HUD } from "@/components/ui/HUD";
+import { CommandPalette } from "@/components/ui/CommandPalette";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,11 +23,11 @@ const siteUrl = "https://santiagoapaul.dev";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Santiago Arias Paul — Frontend Engineer",
+    default: "Santiago Arias Paul — Full-stack Engineer",
     template: "%s | Santiago Arias Paul",
   },
   description:
-    "Frontend Engineer & Computer Technologies student at Tec de Monterrey. Fundación Gallagher scholar. Building interfaces that feel alive.",
+    "Full-stack Engineer & Computer Science student at Tec de Monterrey. Fundación Gallagher scholar. Building products end to end.",
   keywords: [
     "frontend engineer",
     "Next.js",
@@ -42,16 +43,16 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteUrl,
     siteName: "Santiago Arias Paul",
-    title: "Santiago Arias Paul — Frontend Engineer",
+    title: "Santiago Arias Paul — Full-stack Engineer",
     description:
-      "Frontend Engineer & Computer Technologies student at Tec de Monterrey. Fundación Gallagher scholar.",
+      "Full-stack Engineer & Computer Science student at Tec de Monterrey. Fundación Gallagher scholar.",
     images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Santiago Arias Paul — Frontend Engineer",
+    title: "Santiago Arias Paul — Full-stack Engineer",
     description:
-      "Frontend Engineer & Computer Technologies student at Tec de Monterrey.",
+      "Full-stack Engineer & Computer Science student at Tec de Monterrey.",
     images: ["/opengraph-image"],
   },
   robots: {
@@ -66,7 +67,7 @@ const personSchema = {
   "@type": "Person",
   name: "Santiago Arias Paul",
   url: siteUrl,
-  jobTitle: "Frontend Engineer",
+  jobTitle: "Full-stack Engineer",
   alumniOf: {
     "@type": "CollegeOrUniversity",
     name: "Tec de Monterrey",
@@ -92,6 +93,7 @@ export default function RootLayout({
         <LenisProvider>
           <CustomCursor />
           <HUD />
+          <CommandPalette />
           {children}
         </LenisProvider>
       </body>

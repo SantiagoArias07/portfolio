@@ -1,5 +1,6 @@
 "use client";
 import { useRef } from "react";
+import Image from "next/image";
 import { motion, useInView, type Variants } from "framer-motion";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { useReducedMotion } from "@/lib/hooks/useReducedMotion";
@@ -15,37 +16,46 @@ interface Project {
   solution: string;
   deployUrl: string | null;
   repoUrl: string | null;
+  previewBg?: string;
 }
 
-// TODO: Replace placeholders with real project data, images, and links
+// TODO: Add preview screenshots — place images at /public/projects/weekfive.png
+// and /public/projects/climateroots.png, then replace ProjectPreviewPlaceholder
+// with <Image src="/projects/weekfive.png" alt="WeekFive preview" fill className="object-cover" />
 const projects: Project[] = [
   {
-    id: "project-1",
-    name: "Project Alpha",
-    role: "Lead Frontend Engineer",
+    id: "climateroots",
+    name: "ClimateRoots",
+    role: "Full-stack Engineer",
     year: "2025",
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Supabase"],
+    stack: ["Next.js 14", "TypeScript", "Tailwind CSS", "Framer Motion", "Lenis", "Resend", "Server Actions"],
     problem:
-      "TODO: Describe the user problem or business challenge this project addressed.",
+      "SOSAC, a Monterrey environmental NGO running a 1,100 m² regenerated urban garden, needed a digital home that matched the ambition of the physical space — functional tool and editorial showcase at once.",
     solution:
-      "TODO: Describe the technical approach, key decisions, and measurable outcomes.",
-    deployUrl: null, // TODO: add deploy URL
-    repoUrl: null,   // TODO: add repo URL
+      "Custom Next.js App Router site built from scratch — no templates or UI kits. Interactive SVG garden map with 6 zone panels, filterable plant catalogue (12 species), session registration backed by Resend Server Actions, and an infinite-scroll fauna gallery. Animated light/dark mode via clip-path transition.",
+    deployUrl: "https://climateroots.vercel.app",
+    repoUrl: "https://github.com/SantiagoArias07/sosac-climate-roots",
   },
   {
-    id: "project-2",
-    name: "Project Beta",
-    role: "Frontend Engineer",
+    id: "weekfive",
+    name: "WeekFive",
+    role: "Full-stack Engineer",
     year: "2024",
-    stack: ["React", "TypeScript", "Three.js", "WebGL", "Node.js"],
+    stack: ["React 18", "TypeScript", "Vite", "Tailwind CSS", "Zustand", "Node.js", "Express", "SQLite", "JWT"],
     problem:
-      "TODO: Describe the user problem or business challenge this project addressed.",
+      "Tec de Monterrey's fifth week each semester is when all major exams, projects, and deadlines converge. Students had no single tool to track tasks, exams, grades, a weekly planner, and study sessions together.",
     solution:
-      "TODO: Describe the technical approach, key decisions, and measurable outcomes.",
-    deployUrl: null, // TODO: add deploy URL
-    repoUrl: null,   // TODO: add repo URL
+      "Full-stack SPA with per-resource Zustand stores, a REST API on Express + SQLite deployed to Railway on a persistent Volume, and a React frontend on Vercel. Bilingual (EN/ES), Pomodoro timer, weighted GPA calculator, and auto-generated notifications baked in.",
+    deployUrl: "https://weekfive-nine.vercel.app",
+    repoUrl: "https://github.com/SantiagoArias07/week-five",
+    previewBg: "#f8f9fa",
   },
 ];
+
+const projectImages: Record<string, string> = {
+  weekfive: "/projects/weekfive.png",
+  climateroots: "/projects/climateroots.png",
+};
 
 const cardVariants: Variants = {
   hidden: { opacity: 0, y: 40 },
@@ -77,23 +87,19 @@ function ProjectCard({
       data-cursor="crosshair"
       aria-label={`Project: ${project.name}`}
     >
-      {/* Preview placeholder — TODO: replace with next/image or video */}
+      {/* Project preview image */}
       <div
-        className="relative w-full h-56 sm:h-64 bg-[var(--bg-overlay)] border-b border-[var(--border)] overflow-hidden"
-        aria-hidden
+        className="relative w-full overflow-hidden border-b border-[var(--border)]"
+        style={{ aspectRatio: "16 / 9", backgroundColor: project.previewBg ?? "var(--bg-overlay)" }}
       >
-        <div
-          className="absolute inset-0 flex items-center justify-center transition-transform duration-700 group-hover:scale-105"
-          style={{
-            background:
-              "radial-gradient(ellipse at center, rgba(0,255,136,0.06) 0%, transparent 70%)",
-          }}
-        >
-          {/* TODO: <Image src={project.image} alt="" fill className="object-cover" /> */}
-          <span className="font-mono text-xs text-[var(--text-tertiary)] tracking-widest">
-            PREVIEW // TODO
-          </span>
-        </div>
+        <Image
+          src={projectImages[project.id]}
+          alt={`${project.name} preview`}
+          fill
+          className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 80vw, 72rem"
+          priority={index === 0}
+        />
       </div>
 
       <div className="p-8">

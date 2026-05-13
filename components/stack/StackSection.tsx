@@ -19,38 +19,40 @@ const stack: StackCategory[] = [
   {
     label: "Languages",
     items: [
-      { name: "TypeScript", context: "daily driver since 2023, strict mode always on" },
+      { name: "TypeScript", context: "daily driver, strict mode always on" },
       { name: "JavaScript", context: "where TS isn't an option" },
-      { name: "Python", context: "algorithms, scripting, ML experimentation" },
+      { name: "Python", context: "algorithms, scripting, data work" },
       { name: "C++", context: "competitive programming via CODEX" },
+      { name: "Java", context: "OOP fundamentals and academic projects" },
     ],
   },
   {
-    label: "Frameworks",
+    label: "Frontend",
     items: [
-      { name: "Next.js", context: "App Router, RSC, and edge — production choice" },
-      { name: "React", context: "component architecture and state patterns" },
+      { name: "React / Next.js", context: "SPA and App Router — production choice" },
       { name: "Tailwind CSS", context: "utility-first, v4 with design tokens" },
-      { name: "Node.js", context: "APIs, serverless functions, tooling" },
+      { name: "Framer Motion", context: "scroll-driven animations and transitions" },
+      { name: "Three.js / R3F", context: "3D scenes and WebGL experimentation" },
+      { name: "GSAP", context: "complex timelines and ScrollTrigger sequences" },
     ],
   },
   {
-    label: "Tooling",
+    label: "Backend",
     items: [
-      { name: "Framer Motion", context: "smooth transitions and scroll-driven animations" },
-      { name: "Three.js / R3F", context: "3D scenes and WebGL experimentation" },
-      { name: "GSAP", context: "complex timeline sequences and ScrollTrigger" },
+      { name: "Node.js + Express", context: "REST APIs and server-side logic" },
+      { name: "SQLite", context: "embedded persistent storage, zero-config" },
+      { name: "PostgreSQL", context: "relational data at scale" },
+      { name: "JWT + bcrypt", context: "stateless auth and password hashing" },
+      { name: "Resend", context: "transactional email via Server Actions" },
+    ],
+  },
+  {
+    label: "Tooling & Deploy",
+    items: [
       { name: "Git / GitHub", context: "feature branches, conventional commits" },
       { name: "Figma", context: "design → code handoff and component specs" },
-      { name: "Vercel", context: "deploy, preview, and edge config" },
-    ],
-  },
-  {
-    label: "Currently Learning",
-    items: [
-      { name: "GLSL / WebGL", context: "custom shaders and GPU-driven animations" },
-      { name: "Rust", context: "systems thinking and WASM experiments" },
-      { name: "Astro", context: "content-heavy sites with zero JS by default" },
+      { name: "Vercel", context: "frontend deploy, preview, and edge config" },
+      { name: "Railway", context: "backend + persistent volume hosting" },
     ],
   },
 ];

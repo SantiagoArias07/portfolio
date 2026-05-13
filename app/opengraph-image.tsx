@@ -85,10 +85,10 @@ export default function OGImage() {
             marginBottom: 12,
           }}
         >
-          FRONTEND ENGINEER
+          FULL-STACK ENGINEER
         </div>
         <div style={{ color: "#6b6b6b", fontSize: 14, letterSpacing: "0.1em" }}>
-          Computer Technologies Engineering · Tec de Monterrey
+          Computer Science and Technology · Tec de Monterrey
         </div>
 
         {/* Bottom right — credentials */}

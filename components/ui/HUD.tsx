@@ -50,14 +50,21 @@ export function HUD() {
         </span>
       </div>
 
-      {/* Bottom-right scroll */}
+      {/* Bottom-right: scroll % + ⌘K hint */}
       <div
-        className="fixed bottom-5 right-6 z-50 hidden lg:block pointer-events-none select-none"
+        className="fixed bottom-5 right-6 z-50 hidden lg:flex flex-col items-end gap-1 select-none"
         aria-hidden
       >
-        <span className="font-mono text-[10px] text-[var(--text-tertiary)] tracking-wider tabular-nums">
+        <span className="font-mono text-[10px] text-[var(--text-tertiary)] tracking-wider tabular-nums pointer-events-none">
           SCROLL {pct}
         </span>
+        <button
+          onClick={() => window.dispatchEvent(new CustomEvent("command-palette-open"))}
+          className="font-mono text-[10px] text-[var(--text-tertiary)] tracking-wider opacity-50 hover:opacity-100 transition-opacity cursor-pointer pointer-events-auto"
+          title="Open command palette"
+        >
+          ⌘K
+        </button>
       </div>
 
       {/* Bottom-left */}
