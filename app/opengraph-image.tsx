@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Santiago Arias Paul — Frontend Engineer";
+export const alt = "Santiago Arias Paul — Software Engineer";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -17,48 +17,52 @@ export default function OGImage() {
           flexDirection: "column",
           alignItems: "flex-start",
           justifyContent: "center",
-          padding: "80px 100px",
+          padding: "72px 96px",
           fontFamily: "monospace",
           position: "relative",
         }}
       >
-        {/* Top label */}
+        {/* Green left rail */}
         <div
           style={{
             position: "absolute",
-            top: 48,
-            left: 100,
-            color: "#6b6b6b",
-            fontSize: 12,
-            letterSpacing: "0.2em",
+            top: 0,
+            left: 0,
+            width: 3,
+            height: "100%",
+            background: "#00ff88",
           }}
-        >
-          SAP.DEV // v1.0.0
-        </div>
+        />
 
-        {/* Corner coord */}
+        {/* Top row */}
         <div
           style={{
             position: "absolute",
-            top: 48,
-            right: 100,
-            color: "#6b6b6b",
-            fontSize: 12,
-            letterSpacing: "0.1em",
+            top: 44,
+            left: 96,
+            right: 96,
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
           }}
         >
-          25.6866° N, 100.3161° W
+          <span style={{ color: "#6b6b6b", fontSize: 11, letterSpacing: "0.2em" }}>
+            SAP.DEV // v1.0.0
+          </span>
+          <span style={{ color: "#6b6b6b", fontSize: 11, letterSpacing: "0.1em" }}>
+            25.6515° N, 100.2897° W · TEC DE MONTERREY
+          </span>
         </div>
 
-        {/* Main name */}
+        {/* Name */}
         <div
           style={{
-            fontSize: 96,
-            fontWeight: 700,
+            fontSize: 100,
+            fontWeight: 900,
             color: "#ededed",
-            lineHeight: 0.95,
-            letterSpacing: "-0.03em",
-            marginBottom: 24,
+            lineHeight: 0.92,
+            letterSpacing: "-0.04em",
+            marginBottom: 28,
           }}
         >
           SANTIAGO
@@ -69,58 +73,60 @@ export default function OGImage() {
         {/* Accent line */}
         <div
           style={{
-            width: 200,
+            width: 180,
             height: 2,
             background: "#00ff88",
-            marginBottom: 32,
+            marginBottom: 28,
           }}
         />
 
-        {/* Subtitle */}
-        <div
-          style={{
-            color: "#a1a1a1",
-            fontSize: 20,
-            letterSpacing: "0.15em",
-            marginBottom: 12,
-          }}
-        >
-          FULL-STACK ENGINEER
-        </div>
-        <div style={{ color: "#6b6b6b", fontSize: 14, letterSpacing: "0.1em" }}>
-          Computer Science and Technology · Tec de Monterrey
+        {/* Title + institution row */}
+        <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+          <div
+            style={{
+              color: "#a1a1a1",
+              fontSize: 18,
+              letterSpacing: "0.18em",
+              fontWeight: 500,
+            }}
+          >
+            SOFTWARE ENGINEER · FRONTEND-FOCUSED
+          </div>
+          <div style={{ color: "#6b6b6b", fontSize: 13, letterSpacing: "0.1em" }}>
+            B.S. Computer Science and Technology · Tec de Monterrey · 2029
+          </div>
         </div>
 
-        {/* Bottom right — credentials */}
+        {/* Bottom row */}
         <div
           style={{
             position: "absolute",
-            bottom: 48,
-            right: 100,
+            bottom: 44,
+            left: 96,
+            right: 96,
             display: "flex",
-            flexDirection: "column",
+            justifyContent: "space-between",
             alignItems: "flex-end",
-            gap: 8,
           }}
         >
-          <div
-            style={{
-              color: "#00ff88",
-              fontSize: 11,
-              letterSpacing: "0.15em",
-            }}
-          >
-            FUNDACIÓN GALLAGHER SCHOLAR
+          <div style={{ display: "flex", gap: 32 }}>
+            <span
+              style={{
+                color: "#00ff88",
+                fontSize: 10,
+                letterSpacing: "0.18em",
+                fontWeight: 600,
+              }}
+            >
+              GALLAGHER FOUNDATION SCHOLAR
+            </span>
+            <span style={{ color: "#6b6b6b", fontSize: 10, letterSpacing: "0.18em" }}>
+              CODEX // COMPETITIVE PROGRAMMING
+            </span>
           </div>
-          <div
-            style={{
-              color: "#6b6b6b",
-              fontSize: 11,
-              letterSpacing: "0.15em",
-            }}
-          >
-            CODEX // COMPETITIVE PROGRAMMING
-          </div>
+          <span style={{ color: "#3a3a3a", fontSize: 10, letterSpacing: "0.12em" }}>
+            santiagoapaul.dev
+          </span>
         </div>
       </div>
     ),
