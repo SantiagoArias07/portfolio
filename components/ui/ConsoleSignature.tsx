@@ -30,7 +30,7 @@ export function ConsoleSignature() {
       };
 
       console.log("%c" + ascii, s.ascii);
-      console.log("%cLooking for full-stack engineers?", s.heading);
+      console.log("%cLooking for frontend-focused engineers?", s.heading);
       console.log("%cYou found one.", s.body);
       console.log("");
       console.log("%c→ %csantiago.ariasp.dev@gmail.com", s.accent, s.body);

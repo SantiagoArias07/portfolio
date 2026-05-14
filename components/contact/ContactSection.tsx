@@ -133,19 +133,18 @@ export function ContactSection() {
         >
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 font-mono text-[10px] text-[var(--text-tertiary)] tracking-wider">
             <div className="flex flex-wrap gap-6">
-              <span>SAP.DEV // v1.0.0</span>
+              <span>Built with Next.js + R3F</span>
               <span>© {BUILD_YEAR} Santiago Arias Paul</span>
             </div>
             <div className="flex flex-wrap gap-6">
-              <span>Built with Next.js + R3F</span>
               <a
-                href={GITHUB}
+                href="https://github.com/SantiagoArias07/portfolio"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[var(--accent)] transition-colors"
                 data-cursor="hover"
               >
-                SOURCE ↗
+                This portfolio is open source ↗
               </a>
             </div>
           </div>

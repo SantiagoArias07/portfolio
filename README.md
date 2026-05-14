@@ -1,8 +1,9 @@
 # Santiago Arias Paul — Portfolio
 
-Personal portfolio site. Dark techy aesthetic, one-page scroll, built to feel alive.
+Personal portfolio site. Dark techy aesthetic, one-page scroll, built as a work sample.
 
-**Live:** [santiagoapaul.dev](https://santiagoapaul.dev) <!-- update when deployed -->
+**Live:** [santiagoapaul.dev](https://santiagoapaul.dev) <!-- update when domain is confirmed -->  
+**Contact:** santiago.ariasp.dev@gmail.com
 
 ---
 
@@ -14,22 +15,41 @@ Personal portfolio site. Dark techy aesthetic, one-page scroll, built to feel al
 | Language | TypeScript — strict mode |
 | Styling | Tailwind CSS v4 |
 | Animation | Framer Motion v12 |
-| 3D | React Three Fiber + drei |
-| Smooth scroll | Lenis |
+| 3D | React Three Fiber + drei v10 |
+| Smooth scroll | Lenis v1 |
+| Command palette | cmdk |
+| Icons | lucide-react |
 | Fonts | Geist + Geist Mono via `next/font` |
 | Deploy | Vercel |
 
 ---
 
+## Sections
+
+| # | Section | Status |
+|---|---|---|
+| 01 | **Hero** | R3F distorted wireframe icosahedron, mouse-reactive rotation, glitch on name load + periodic |
+| 02 | **About** | Editorial 2/3 + metadata sidebar; B.S. Computer Science, Tec de Monterrey, grad 2029 |
+| 03 | **Credentials** | Gallagher Foundation scholarship + CODEX program — both 2025, active, with external links |
+| 04 | **Selected Work** | ClimateRoots (2026) + WeekFive (2026) — real screenshots, live URLs, repo links, clickable images |
+| 05 | **Hackathons** | Capital One (2026), Gen Técnico 2025/2024, Technical Diploma (2025), Programming Cert (2024) |
+| 06 | **Stack** | Languages · Frontend · Application & Database · Tooling & Deploy — 19 tools with one-liner context |
+| 07 | **Contact** | Email + copy, GitHub, LinkedIn, CV — plus footer |
+
+---
+
 ## Interaction System
 
-The site has a cohesive interaction layer, not isolated tricks:
+Cohesive layer, not isolated tricks:
 
-- **Custom cursor** — small dot that morphs on hover, becomes a crosshair over project cards. Hidden on touch devices.
-- **HUD corners** — fixed elements showing live timestamp, Monterrey coordinates, scroll %, site version.
-- **Section transitions** — each section types in its mono label (`02 / ABOUT`) and draws an accent line on scroll enter.
-- **Glitch effect** — CSS clip-path glitch on the hero name at load and periodically. Used nowhere else.
-- **`prefers-reduced-motion`** — all animations disabled, glitch off, cursor hidden, functional transitions only.
+- **Custom cursor** — 8px dot, morphs to 24px on hover, 36px crosshair on project cards. Mix-blend-difference. Hidden on touch.
+- **HUD corners** — live timestamp (top-right), Tec de Monterrey coords `25.6515° N, 100.2897° W` (top-right), scroll % (bottom-right), contact icon strip — mail / GitHub / LinkedIn / CV (bottom-left).
+- **Command palette** — `⌘K` / `Ctrl+K` / `/` — navigate sections, copy email, open GitHub/LinkedIn, download CV, toggle reduced motion. Visible pill trigger button (bottom-right, above HUD).
+- **Section transitions** — mono label types in on scroll enter (`02 / ABOUT`) + accent line draws across viewport.
+- **Glitch effect** — CSS clip-path on hero name at load and periodically. Used nowhere else.
+- **Ambient backdrop** — fixed WebGL canvas behind all content. Simplex noise shader at 4% opacity — "the void has texture". Pauses on tab-hidden. Freezes on reduced-motion.
+- **Console signature** — styled ASCII "SAP" + contact links logged on DevTools open. Recruiter bait.
+- **`prefers-reduced-motion`** — all animations, glitch, parallax, backdrop movement disabled. Functional transitions only.
 
 ---
 
@@ -37,56 +57,66 @@ The site has a cohesive interaction layer, not isolated tricks:
 
 ```
 app/
-  layout.tsx          # Root layout, metadata, schema.org Person
-  page.tsx            # One-page composition
-  globals.css         # Design tokens, glitch keyframes
-  opengraph-image.tsx # Custom OG image (edge runtime)
+  layout.tsx            # Root layout, metadata, schema.org Person, global components
+  page.tsx              # One-page composition
+  globals.css           # Design tokens, glitch + noise keyframes
+  opengraph-image.tsx   # Custom OG image (edge runtime)
   sitemap.ts
   robots.ts
 
 components/
   ui/
+    CommandPalette.tsx  # ⌘K palette — navigation, contact, preferences
+    ConsoleSignature.tsx # DevTools ASCII easter egg
     CustomCursor.tsx
-    HUD.tsx
-    SectionWrapper.tsx  # Label typewriter + accent line draw
     GlitchText.tsx
-    LenisProvider.tsx
+    HUD.tsx             # All 4 HUD corners incl. contact icon strip
+    LenisProvider.tsx   # Smooth scroll + exposes window.__lenis
+    PaletteTrigger.tsx  # Floating ⌘K pill button
+    SectionWrapper.tsx  # Label typewriter + accent line draw
   hero/
     HeroSection.tsx
     ScrollIndicator.tsx
   three/
-    HeroScene.tsx       # R3F canvas — distorted wireframe icosahedron
-  about/
-  credentials/
-  work/
-  hackathons/
-  stack/
-  contact/
+    AmbientBackdrop.tsx       # Fixed full-screen simplex noise shader
+    AmbientBackdropLoader.tsx # SSR-safe dynamic wrapper
+    HeroScene.tsx             # R3F icosahedron scene
+
+  about/AboutSection.tsx
+  credentials/CredentialsSection.tsx
+  hackathons/HackathonsSection.tsx
+  stack/StackSection.tsx
+  work/WorkSection.tsx
+  contact/ContactSection.tsx
 
 lib/
-  animations.ts         # EASE_OUT constant, shared Variants
+  animations.ts           # EASE_OUT = [0.16,1,0.3,1] typed tuple, shared Variants
   hooks/
     useReducedMotion.ts
     useScrollProgress.ts
+
+public/
+  projects/
+    climateroots.png    # ClimateRoots preview screenshot
+    weekfive.png        # WeekFive preview screenshot
+  cv.pdf                # TODO: add CV
 ```
 
 ---
 
 ## Design Tokens
 
-Defined as CSS variables in `app/globals.css`:
-
-```
---bg-base:        #0a0a0a
---bg-raised:      #111111
---bg-overlay:     #1a1a1a
+```css
+--bg-base:        #0a0a0a   /* page background */
+--bg-raised:      #111111   /* cards */
+--bg-overlay:     #1a1a1a   /* elevated surfaces */
 --border:         #1f1f1f
 --text-primary:   #ededed
 --text-secondary: #a1a1a1
 --text-tertiary:  #6b6b6b
---accent:         #00ff88   ← phosphor green, used sparingly
+--accent:         #00ff88   /* phosphor green — used sparingly */
 --accent-dim:     rgba(0,255,136,0.15)
---danger:         #ff0055   ← glitch only
+--danger:         #ff0055   /* glitch pseudo-elements only */
 ```
 
 ---
@@ -95,39 +125,22 @@ Defined as CSS variables in `app/globals.css`:
 
 ```bash
 npm install
-npm run dev
+npm run dev      # http://localhost:3000
+npm run build    # production build
 ```
-
-Open [http://localhost:3000](http://localhost:3000).
-
----
-
-## Sections
-
-| # | Section | Notes |
-|---|---|---|
-| 01 | Hero | R3F wireframe icosahedron, mouse-reactive, glitch on name |
-| 02 | About | Editorial 2/3 + metadata column layout |
-| 03 | Credentials | Fundación Gallagher + CODEX feature cards |
-| 04 | Selected Work | Case study cards — **TODO: add real projects** |
-| 05 | Hackathons | Timeline format — **TODO: add real events** |
-| 06 | Stack | Grouped by category with one-liner context |
-| 07 | Contact | Email CTA + copy button, GitHub, LinkedIn, CV |
 
 ---
 
 ## Pending TODOs
 
-- [ ] Fill in real project data in `components/work/WorkSection.tsx`
-- [ ] Fill in hackathon entries in `components/hackathons/HackathonsSection.tsx`
-- [ ] Add LinkedIn URL in `components/contact/ContactSection.tsx`
 - [ ] Add `public/cv.pdf`
-- [ ] Update domain in `app/layout.tsx`, `app/sitemap.ts`, `app/robots.ts`
-- [ ] Add preview images/videos for project cards
+- [ ] Update domain in `app/layout.tsx`, `app/sitemap.ts`, `app/robots.ts` once confirmed
+- [ ] Fill in real project data in `components/work/WorkSection.tsx` (role, year already updated — verify dates)
+- [ ] Add repo URLs for ClimateRoots and WeekFive once repos are public
 
 ---
 
-## Performance Budget
+## Performance Targets
 
 | Metric | Target |
 |---|---|
@@ -137,20 +150,8 @@ Open [http://localhost:3000](http://localhost:3000).
 | CLS | < 0.05 |
 | INP | < 200ms |
 
-3D scene lazy-loads with `next/dynamic({ ssr: false })`. Fallback is a CSS radial gradient.
+Hero 3D scene lazy-loads via `next/dynamic({ ssr: false })`. Ambient backdrop uses `powerPreference: "low-power"` and pauses when tab is hidden.
 
 ---
 
-## Deploy
-
-Push to `main` → Vercel auto-deploys.
-
-```bash
-git add .
-git commit -m "feat: initial portfolio build"
-git push origin main
-```
-
----
-
-Built by [Santiago Arias Paul](https://github.com/SantiagoArias07)
+Built by [Santiago Arias Paul](https://github.com/SantiagoArias07) · [linkedin.com/in/santiago-arias-paul-49992b2b0](https://www.linkedin.com/in/santiago-arias-paul-49992b2b0/)

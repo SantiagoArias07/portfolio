@@ -26,26 +26,26 @@ const projects: Project[] = [
   {
     id: "climateroots",
     name: "ClimateRoots",
-    role: "Full-stack Engineer",
-    year: "2025",
+    role: "Solo Developer — Design & Engineering",
+    year: "2026",
     stack: ["Next.js 14", "TypeScript", "Tailwind CSS", "Framer Motion", "Lenis", "Resend", "Server Actions"],
     problem:
-      "SOSAC, a Monterrey environmental NGO running a 1,100 m² regenerated urban garden, needed a digital home that matched the ambition of the physical space — functional tool and editorial showcase at once.",
+      "SOSAC runs a 1,100 m² regenerated urban garden in Monterrey — a living lab for urban ecology. They needed a digital home that matched the quality of the physical space, not an off-the-shelf template.",
     solution:
-      "Custom Next.js App Router site built from scratch — no templates or UI kits. Interactive SVG garden map with 6 zone panels, filterable plant catalogue (12 species), session registration backed by Resend Server Actions, and an infinite-scroll fauna gallery. Animated light/dark mode via clip-path transition.",
+      "Custom Next.js App Router site: 6 interactive SVG garden zones, 12-species filterable plant catalogue with static detail pages (SSG), community registration via Resend Server Actions, and an 8-species infinite-scroll fauna gallery. Light/dark mode via circular clip-path animation. SOSAC invited future collaboration post-delivery.",
     deployUrl: "https://climateroots.vercel.app",
     repoUrl: "https://github.com/SantiagoArias07/sosac-climate-roots",
   },
   {
     id: "weekfive",
     name: "WeekFive",
-    role: "Full-stack Engineer",
-    year: "2024",
+    role: "Solo Developer — Software Engineering",
+    year: "2026",
     stack: ["React 18", "TypeScript", "Vite", "Tailwind CSS", "Zustand", "Node.js", "Express", "SQLite", "JWT"],
     problem:
-      "Tec de Monterrey's fifth week each semester is when all major exams, projects, and deadlines converge. Students had no single tool to track tasks, exams, grades, a weekly planner, and study sessions together.",
+      "Week Five — Tec de Monterrey's peak of simultaneous deadlines — exposed a gap: no tool consolidated task tracking, exam scheduling, weighted GPA, and Pomodoro study sessions in a single workflow.",
     solution:
-      "Full-stack SPA with per-resource Zustand stores, a REST API on Express + SQLite deployed to Railway on a persistent Volume, and a React frontend on Vercel. Bilingual (EN/ES), Pomodoro timer, weighted GPA calculator, and auto-generated notifications baked in.",
+      "Bilingual (EN/ES) full-stack platform across 10 pages: full task CRUD with overdue detection, weighted GPA auto-calculation, exam-to-study-session generator, 25-min Pomodoro timer, and auto-generated notifications. Modular Zustand stores per resource. Express + SQLite API on Railway persistent Volume with JWT auth.",
     deployUrl: "https://weekfive-nine.vercel.app",
     repoUrl: "https://github.com/SantiagoArias07/week-five",
     previewBg: "#f8f9fa",

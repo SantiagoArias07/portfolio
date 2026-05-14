@@ -25,7 +25,7 @@ const achievements: Achievement[] = [
     date: "2026.04.10",
     title: "Capital One Hackathon",
     context: "SharedSavings — collaborative financial goals platform. JavaScript · Python · CSS · HTML. Built with team.",
-    result: "Participated",
+    result: "Team-built fintech prototype",
     links: [
       { label: "capitalone.com ↗", url: "https://www.capitalone.com" },
       { label: "INSTAGRAM ↗", url: "https://www.instagram.com/p/DXftGpejUtK/?img_index=1" },
@@ -39,7 +39,7 @@ const achievements: Achievement[] = [
     context: "Completed a specialized technical program focused on software (Python, C, C++, Java, PHP, SQL, HTML/CSS/JS).",
     result: "Certified",
     links: [
-      { label: "cetis15.com ↗", url: "https://www.cetis15.edu.mx" },
+      { label: "cetis15.edu.mx ↗", url: "https://www.cetis15.edu.mx" },
     ],
   },
   {
@@ -47,7 +47,7 @@ const achievements: Achievement[] = [
     date: "2025.05.15",
     title: "Gen Técnico 2025",
     context: "Hackathon organized by Tenaris TAMSA. Awarded as part of the Beca Roberto Rocca program.",
-    result: "Participated",
+    result: "Roberto Rocca Scholar",
     links: [
       { label: "robertorocca.org ↗", url: "https://www.robertorocca.org/es/gen-tecnico" },
     ],
@@ -57,7 +57,7 @@ const achievements: Achievement[] = [
     date: "2024.05.15",
     title: "Gen Técnico 2024",
     context: "Hackathon organized by Tenaris TAMSA. Awarded as part of the Beca Roberto Rocca program.",
-    result: "Participated",
+    result: "Roberto Rocca Scholar",
     links: [
       { label: "robertorocca.org ↗", url: "https://www.robertorocca.org/es/gen-tecnico" },
     ],

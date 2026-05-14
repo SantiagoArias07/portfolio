@@ -21,7 +21,7 @@ const META = [
   { label: "PROGRAM", value: "B.S. in Computer Science and Technology" },
   { label: "INSTITUTION", value: "Tec de Monterrey" },
   { label: "GRADUATION", value: "2029 (expected)" },
-  { label: "STATUS", value: "Open to opportunities" },
+  { label: "STATUS", value: "Open to frontend-focused software engineering roles." },
   { label: "LANGUAGES", value: "ES / EN" },
 ];
 
@@ -61,7 +61,7 @@ export function AboutSection() {
             className="text-[var(--text-secondary)] leading-relaxed mb-6"
             variants={fadeUp}
           >
-            I build modern web interfaces using TypeScript and React, focusing on performance, clarity, and user experience. I regularly integrate APIs and design backend interactions that keep systems maintainable and predictable, working with Node.js, Express, and relational databases when needed. I also write Python for algorithms and scripting, C++ for competitive programming, and Java when the problem calls for it. I reach for Three.js and GSAP when something needs to move in a way that stops people mid-scroll. I think in systems: a design token is a contract, a component is a promise, and a millisecond of jank is a broken one.
+            I build modern web interfaces using TypeScript and React, focusing on performance, clarity, and user experience. I regularly integrate APIs and design backend interactions that keep systems maintainable and predictable, working with Node.js, Express, and relational databases when needed. I also write Python for algorithms and scripting, C++ for competitive programming, and Java for object-oriented systems and academic projects. I reach for Three.js and GSAP when something needs to move in a way that stops people mid-scroll. I think in systems: a design token is a contract, a component is a promise, and a millisecond of jank is a broken one.
           </motion.p>
 
           <motion.p
@@ -73,11 +73,11 @@ export function AboutSection() {
             <span className="text-[var(--text-primary)] font-medium">CODEX</span> —
             Tec&apos;s high-performance programming program — and hold the{" "}
             <span className="text-[var(--text-primary)] font-medium">
-              Fundación Gallagher scholarship
+              Gallagher Foundation scholarship
             </span>
-            , one of the most selective merit awards in Mexico. Currently
-            looking for a software engineering role where craft and ambition are both on
-            the table.
+            , one of Mexico&apos;s most selective merit awards. Currently looking for a
+            frontend-focused software engineering role where craft and ambition are both
+            on the table.
           </motion.p>
         </div>
 
