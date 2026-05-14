@@ -10,13 +10,21 @@ Personal portfolio site. Dark techy aesthetic, one-page scroll, built as a work 
 ## Preview
 
 <div align="center">
-  <!-- Upload screenshots to GitHub via Issues or Releases, then paste the user-attachments URLs below -->
-  <!-- <img src="https://github.com/user-attachments/assets/TODO" width="48%" alt="Hero" />
-  <img src="https://github.com/user-attachments/assets/TODO" width="48%" alt="About + Credentials" />
-  <br/><br/>
-  <img src="https://github.com/user-attachments/assets/TODO" width="48%" alt="Selected Work" />
-  <img src="https://github.com/user-attachments/assets/TODO" width="48%" alt="Stack + Currently" /> -->
-</div>
+    <img src="https://github.com/user-attachments/assets/0b50ecde-4fb2-4a21-9b9f-84600aceb9b2"        
+  width="48%" alt="Hero" />       
+    <img src="https://github.com/user-attachments/assets/ed739967-4fb8-45f0-9c0b-b966bc8cafbd" 
+  width="48%" alt="About" />         
+    <br/><br/>                       
+    <img src="https://github.com/user-attachments/assets/69090cf5-2bd5-4abc-bd6e-412d4a5dc6ee"        
+  width="48%" alt="Credentials" />         
+    <img src="https://github.com/user-attachments/assets/1bfa5071-8135-4b0f-a68e-2e56f713701b" 
+  width="48%" alt="Work" />          
+    <br/><br/>
+    <img src="https://github.com/user-attachments/assets/33f0acaf-e9af-41f3-b409-9e5caa4a6f22"        
+  width="48%" alt="Hackatons" />         
+    <img src="https://github.com/user-attachments/assets/2ec48448-1ecb-4672-a58c-55d46b5d0946" 
+  width="48%" alt="Stack" />
+  </div>
 
 ---
 
