@@ -116,6 +116,38 @@ export function StackSection() {
             </div>
           ))}
         </div>
+
+        {/* ── Currently — spans both columns ───────────────── */}
+        <motion.div
+          custom={idx}
+          variants={itemVariants}
+          initial={reduced ? "show" : "hidden"}
+          animate={inView ? "show" : "hidden"}
+          className="mt-10"
+        >
+          <h3 className="font-mono text-[10px] text-[var(--accent)] tracking-widest mb-6">
+            CURRENTLY BUILDING WITH
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-0 border-b border-[var(--border)]">
+            {[
+              { name: "TanStack Query", context: "async server state, caching, and data fetching patterns" },
+              { name: "Vitest + RTL", context: "unit and integration testing for React components" },
+            ].map((item) => (
+              <div
+                key={item.name}
+                className="group flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 py-3 border-t border-[var(--border)] transition-colors hover:bg-[var(--bg-raised)] -mx-2 px-2 rounded cursor-default"
+                data-cursor="hover"
+              >
+                <span className="font-medium text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors min-w-[140px] text-sm sm:text-base">
+                  {item.name}
+                </span>
+                <span className="text-xs text-[var(--text-tertiary)] font-mono leading-relaxed">
+                  {item.context}
+                </span>
+              </div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </SectionWrapper>
   );

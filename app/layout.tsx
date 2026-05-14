@@ -20,18 +20,22 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-const siteUrl = "https://santiagoapaul.dev";
+// Temporary: using Vercel deployment URL until custom domain is confirmed
+const siteUrl = "https://portfolio-chi-ivory-84.vercel.app";
+
+const DESCRIPTION =
+  "Frontend-focused software engineer and Computer Science student at Tec de Monterrey building interactive web experiences with React, Next.js, TypeScript, and modern frontend systems.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Santiago Arias Paul — Full-stack Engineer",
+    default: "Santiago's Portfolio",
     template: "%s | Santiago Arias Paul",
   },
-  description:
-    "Full-stack Engineer & Computer Science student at Tec de Monterrey. Fundación Gallagher scholar. Building products end to end.",
+  description: DESCRIPTION,
   keywords: [
     "frontend engineer",
+    "software engineer",
     "Next.js",
     "React",
     "TypeScript",
@@ -45,17 +49,15 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteUrl,
     siteName: "Santiago Arias Paul",
-    title: "Santiago Arias Paul — Full-stack Engineer",
-    description:
-      "Full-stack Engineer & Computer Science student at Tec de Monterrey. Fundación Gallagher scholar.",
-    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
+    title: "Santiago Arias Paul — Frontend-focused Software Engineer",
+    description: DESCRIPTION,
+    images: [{ url: `${siteUrl}/opengraph-image`, width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Santiago Arias Paul — Full-stack Engineer",
-    description:
-      "Full-stack Engineer & Computer Science student at Tec de Monterrey.",
-    images: ["/opengraph-image"],
+    title: "Santiago Arias Paul — Frontend-focused Software Engineer",
+    description: DESCRIPTION,
+    images: [`${siteUrl}/opengraph-image`],
   },
   robots: {
     index: true,
@@ -69,7 +71,7 @@ const personSchema = {
   "@type": "Person",
   name: "Santiago Arias Paul",
   url: siteUrl,
-  jobTitle: "Full-stack Engineer",
+  jobTitle: "Frontend-focused Software Engineer",
   alumniOf: {
     "@type": "CollegeOrUniversity",
     name: "Tec de Monterrey",

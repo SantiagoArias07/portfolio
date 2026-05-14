@@ -70,7 +70,7 @@ export function ContactSection() {
           <div className="flex flex-wrap items-center gap-4">
             <a
               href={`mailto:${EMAIL}`}
-              className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors duration-200 break-all"
+              className="text-base sm:text-2xl md:text-3xl font-bold text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors duration-200 break-all"
               data-cursor="hover"
             >
               {EMAIL}
