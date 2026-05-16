@@ -37,6 +37,19 @@ const projects: Project[] = [
     repoUrl: "https://github.com/SantiagoArias07/sosac-climate-roots",
   },
   {
+    id: "safeguide",
+    name: "SafeGuide",
+    role: "Solo Developer — Full-stack & AI Integration",
+    year: "2026",
+    stack: ["React 18 + Vite", "TailwindCSS", "Framer Motion", "TanStack Query", "FastAPI", "PostgreSQL", "Groq AI", "Vitest"],
+    problem:
+      "People in Mexico facing gender-based violence, disability, or social exclusion had no single trusted place to find confidential orientation on their rights, locate nearby services, or access legal guidance without creating an account.",
+    solution:
+      "AI assistant trained on Mexican human rights law with crisis detection and emergency hotlines. Interactive map of 200+ verified resources (shelters, legal aid, health). FastAPI + PostgreSQL on Railway, React + TanStack Query on Vercel. 23 Vitest tests. Built for EduMakers × Tec de Monterrey.",
+    deployUrl: "https://safeguide-two.vercel.app",
+    repoUrl: "https://github.com/SantiagoArias07/edumakers-safe-guide",
+  },
+  {
     id: "weekfive",
     name: "WeekFive",
     role: "Solo Developer — Software Engineering",
@@ -55,6 +68,7 @@ const projects: Project[] = [
 const projectImages: Record<string, string> = {
   weekfive: "/projects/weekfive.png",
   climateroots: "/projects/climateroots.png",
+  safeguide: "/projects/safeguide.png", // TODO: add screenshot at public/projects/safeguide.png
 };
 
 const cardVariants: Variants = {
@@ -76,6 +90,31 @@ function ProjectCard({
   inView: boolean;
 }) {
   const reduced = useReducedMotion();
+  const imageSrc = projectImages[project.id] as string | undefined;
+
+  const previewSlot = (
+    <div
+      className="relative w-full overflow-hidden border-b border-[var(--border)]"
+      style={{ aspectRatio: "16 / 9", backgroundColor: project.previewBg ?? "var(--bg-overlay)" }}
+    >
+      {imageSrc ? (
+        <Image
+          src={imageSrc}
+          alt={`${project.name} preview`}
+          fill
+          className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 80vw, 72rem"
+          priority={index === 0}
+        />
+      ) : (
+        <div className="absolute inset-0 flex items-center justify-center">
+          <span className="font-mono text-[10px] text-[var(--text-tertiary)] tracking-widest opacity-40">
+            PREVIEW // PENDING
+          </span>
+        </div>
+      )}
+    </div>
+  );
 
   return (
     <motion.article
@@ -87,7 +126,7 @@ function ProjectCard({
       data-cursor="crosshair"
       aria-label={`Project: ${project.name}`}
     >
-      {/* Project preview image — click opens live site */}
+      {/* Project preview — click opens live site when deployUrl exists */}
       {project.deployUrl ? (
         <a
           href={project.deployUrl}
@@ -95,39 +134,22 @@ function ProjectCard({
           rel="noopener noreferrer"
           aria-label={`Visit ${project.name} live site`}
           data-cursor="crosshair"
-          className="relative block w-full overflow-hidden border-b border-[var(--border)]"
-          style={{ aspectRatio: "16 / 9", backgroundColor: project.previewBg ?? "var(--bg-overlay)" }}
+          className="relative block"
         >
-          <Image
-            src={projectImages[project.id]}
-            alt={`${project.name} preview`}
-            fill
-            className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 80vw, 72rem"
-            priority={index === 0}
-          />
-          {/* Hover overlay */}
-          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-            style={{ background: "rgba(0,0,0,0.45)" }}>
-            <span className="font-mono text-xs tracking-widest text-[var(--accent)] border border-[var(--accent)] px-3 py-1.5 rounded">
-              VISIT ↗
-            </span>
-          </div>
+          {previewSlot}
+          {imageSrc && (
+            <div
+              className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+              style={{ background: "rgba(0,0,0,0.45)" }}
+            >
+              <span className="font-mono text-xs tracking-widest text-[var(--accent)] border border-[var(--accent)] px-3 py-1.5 rounded">
+                VISIT ↗
+              </span>
+            </div>
+          )}
         </a>
       ) : (
-        <div
-          className="relative w-full overflow-hidden border-b border-[var(--border)]"
-          style={{ aspectRatio: "16 / 9", backgroundColor: project.previewBg ?? "var(--bg-overlay)" }}
-        >
-          <Image
-            src={projectImages[project.id]}
-            alt={`${project.name} preview`}
-            fill
-            className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 80vw, 72rem"
-            priority={index === 0}
-          />
-        </div>
+        previewSlot
       )}
 
       <div className="p-8">
