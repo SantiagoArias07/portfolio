@@ -46,7 +46,7 @@ const projects: Project[] = [
       "People in Mexico facing gender-based violence, disability, or social exclusion had no single trusted place to find confidential orientation on their rights, locate nearby services, or access legal guidance without creating an account.",
     solution:
       "AI assistant trained on Mexican human rights law with crisis detection and emergency hotlines. Interactive map of 200+ verified resources (shelters, legal aid, health). FastAPI + PostgreSQL on Railway, React + TanStack Query on Vercel. 23 Vitest tests. Built for EduMakers × Tec de Monterrey.",
-    deployUrl: "https://safeguide-two.vercel.app",
+    deployUrl: "https://safeguide-edumakers.vercel.app",
     repoUrl: "https://github.com/SantiagoArias07/edumakers-safe-guide",
   },
   {
@@ -59,7 +59,7 @@ const projects: Project[] = [
       "Week Five — Tec de Monterrey's peak of simultaneous deadlines — exposed a gap: no tool consolidated task tracking, exam scheduling, weighted GPA, and Pomodoro study sessions in a single workflow.",
     solution:
       "Bilingual (EN/ES) full-stack platform across 10 pages: full task CRUD with overdue detection, weighted GPA auto-calculation, exam-to-study-session generator, 25-min Pomodoro timer, and auto-generated notifications. Modular Zustand stores per resource. Express + SQLite API on Railway persistent Volume with JWT auth.",
-    deployUrl: "https://weekfive-nine.vercel.app",
+    deployUrl: "https://weekfive-tec.vercel.app",
     repoUrl: "https://github.com/SantiagoArias07/week-five",
     previewBg: "#f8f9fa",
   },
