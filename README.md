@@ -2,7 +2,7 @@
 
 Personal portfolio site. Dark techy aesthetic, one-page scroll, built as a work sample.
 
-**Live:** [portfolio-chi-ivory-84.vercel.app](https://portfolio-chi-ivory-84.vercel.app)  
+**Live:** [santiagoarias.vercel.app](https://santiagoarias.vercel.app)  
 **Contact:** santiago.ariasp.dev@gmail.com
 
 ---
