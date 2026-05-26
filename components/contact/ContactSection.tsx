@@ -113,7 +113,7 @@ export function ContactSection() {
             LINKEDIN ↗
           </a>
           <a
-            href={CV_PATH}
+            href={"/Santiago_Arias_Paul_CV.pdf"}
             download
             className="font-mono text-sm text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors duration-200 tracking-widest"
             data-cursor="hover"
