@@ -95,7 +95,7 @@ export function CommandPalette() {
 
   const downloadCV = () => {
     const a = document.createElement("a");
-    a.href = "/cv.pdf";
+    a.href = "/Santiago_Arias_Paul_CV.pdf";
     a.download = "Santiago_Arias_Paul_CV.pdf";
     a.click();
     closePalette();

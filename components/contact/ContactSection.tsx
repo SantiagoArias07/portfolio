@@ -9,7 +9,7 @@ const EMAIL = "santiago.ariasp.dev@gmail.com";
 const GITHUB = "https://github.com/SantiagoArias07";
 const LINKEDIN = "https://www.linkedin.com/in/santiago-arias-paul-49992b2b0/";
 // TODO: Add CV PDF to /public and update this path
-const CV_PATH = "/cv.pdf";
+const CV_PATH = "/Santiago_Arias_Paul_CV.pdf";
 
 const BUILD_YEAR = new Date().getFullYear();
 

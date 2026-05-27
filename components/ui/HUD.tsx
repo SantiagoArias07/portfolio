@@ -5,7 +5,7 @@ import { useScrollProgress } from "@/lib/hooks/useScrollProgress";
 const EMAIL = "santiago.ariasp.dev@gmail.com";
 const GITHUB = "https://github.com/SantiagoArias07";
 const LINKEDIN = "https://www.linkedin.com/in/santiago-arias-paul-49992b2b0/";
-const CV = "/cv.pdf";
+const CV = "/Santiago_Arias_Paul_CV.pdf";
 
 // Minimal inline SVGs — 14×14 viewBox
 const MailIcon = () => (
