@@ -114,8 +114,7 @@ export function ContactSection() {
           </a>
           <a
             href={"/Santiago_Arias_Paul_CV.pdf"}
-            target="_blank"
-            rel="noopener noreferrer"
+            download="Santiago_Arias_Paul_CV.pdf"
             className="font-mono text-sm text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors duration-200 tracking-widest"
             data-cursor="hover"
           >
