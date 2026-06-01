@@ -30,7 +30,7 @@ const credentials: Credential[] = [
     year: "2025",
     status: "Active",
     tag: "SCHOLARSHIP",
-    link: "https://gallagherfoundation.org",
+    link: "https://gallagherfoundation.org/scholars/santiago-arias-paul",
     linkLabel: "gallagherfoundation.org ↗",
   },
   {
@@ -44,8 +44,8 @@ const credentials: Credential[] = [
     year: "2025",
     status: "Active",
     tag: "PROGRAM",
-    link: "https://www.instagram.com/p/DNW4lJis5nT/",
-    linkLabel: "INSTAGRAM ↗",
+    link: "https://www.linkedin.com/feed/update/urn:li:activity:7464387463122259968/",
+    linkLabel: "LINKEDIN ↗",
   },
 ];
 

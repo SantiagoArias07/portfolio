@@ -20,8 +20,33 @@ interface Achievement {
 }
 
 const achievements: Achievement[] = [
+    {
+    id: "ach-7",
+    date: "2026.06.01",
+    title: "CODEX Hackathon — John Deere × Tec",
+    context: "FieldLoop — Monte Carlo harvest decision engine that recommends robust crop sequencing under weather uncertainty. Data-calibrated simulation + Regret Meter. Built with team. Next.js 16 · FastAPI · numpy · Anthropic API.",
+    result: "In progress",
+    links: [
+      { label: "prediction-center.vercel.app ↗", url: "https://prediction-center.vercel.app" },
+      { label: "deere.com ↗", url: "https://www.deere.com.mx/es/" },
+      { label: "REPO ↗", url: "https://github.com/Fernando-Mauro/hacka-codex" },
+    ],
+  },
+    {
+    id: "ach-6",
+    date: "2026.05.29",
+    title: "Platanus Build Night",
+    context: "Adversarial QA agent that finds business-logic bugs and writes the regression test. Claude explores, infers invariants, breaks them, and auto-generates Playwright tests. Built solo in 12h. Next.js 16 · TypeScript · Anthropic SDK · SSE streaming.",
+    result: "1 of 25 selected hackers",
+    links: [
+      { label: "platanus.com ↗", url: "https://platan.us" },
+      { label: "antropic.com ↗", url: "https://www.anthropic.com" },
+      { label: "invariant-mx.vercel.app ↗", url: "https://invariant-mx.vercel.app" },
+      { label: "REPO ↗", url: "https://github.com/SantiagoArias07/Invariant" },
+    ],
+  },
   {
-    id: "ach-1",
+    id: "ach-5",
     date: "2026.04.10",
     title: "Capital One Hackathon",
     context: "SharedSavings — collaborative financial goals platform. JavaScript · Python · CSS · HTML. Built with team.",
@@ -33,7 +58,7 @@ const achievements: Achievement[] = [
     ],
   },
   {
-    id: "ach-2",
+    id: "ach-4",
     date: "2025.07.16",
     title: "Technical Diploma in Programming",
     context: "Completed a specialized technical program focused on software (Python, C, C++, Java, PHP, SQL, HTML/CSS/JS).",
@@ -53,7 +78,7 @@ const achievements: Achievement[] = [
     ],
   },
   {
-    id: "ach-4",
+    id: "ach-2",
     date: "2024.05.15",
     title: "Gen Técnico 2024",
     context: "Hackathon organized by Tenaris TAMSA. Awarded as part of the Beca Roberto Rocca program.",
@@ -63,7 +88,7 @@ const achievements: Achievement[] = [
     ],
   },
   {
-    id: "ach-5",
+    id: "ach-1",
     date: "2024.02.17",
     title: "Programming Certification",
     context: "Computación del Golfo — software engineering and programming certification.",
