@@ -24,11 +24,11 @@ const achievements: Achievement[] = [
     id: "ach-8",
     date: "2026.06.05",
     title: "Concienc.IA Hackathon",
-    context: "FloodSense — Urban flood risk intelligence platform for Mexico City. XGBoost agents predict rainfall intensity and flood severity per zone; IBM watsonx generates plain-language alerts for citizens and action protocols for authorities. Works across the 60% of neighborhoods with no sensor data. React · Leaflet · FastAPI · XGBoost · IBM watsonx · Groq/Llama 3.3.",
+    context: "FloodSense — Urban flood risk intelligence platform. XGBoost agents predict rainfall intensity and flood severity per zone; IBM watsonx generates plain-language alerts for citizens and action protocols for authorities. Works across the 60% of neighborhoods with no sensor data. React · Leaflet · FastAPI · XGBoost · IBM watsonx · Groq/Llama 3.3.",
     result: "1st place — Water challenge track",
     links: [
-      { label: "tec.mx ↗", url: "https://tec.mx/es?srsltid=AfmBOoqPGWyoWmG1buYFrOJbOrpRPHUzYojx5kRDs04_imKgRJYOjoNE" },
       { label: "ibm.com ↗", url: "https://www.ibm.com/mx-es" },
+      { label: "tec.mx ↗", url: "https://tec.mx/es?srsltid=AfmBOoqPGWyoWmG1buYFrOJbOrpRPHUzYojx5kRDs04_imKgRJYOjoNE" },
       { label: "LINKEDIN ↗", url: "https://www.linkedin.com/feed/update/urn:li:activity:7471744461895569408/" },
       { label: "floodsensetec.vercel.app ↗", url: "https://floodsensetec.vercel.app" },
       { label: "REPO ↗", url: "https://github.com/SantiagoArias07/hack-conciencia" },
@@ -41,8 +41,8 @@ const achievements: Achievement[] = [
     context: "FieldLoop — Monte Carlo harvest decision engine that recommends robust crop sequencing under weather uncertainty. Data-calibrated simulation + Regret Meter. Built with team. Next.js 16 · FastAPI · numpy · Anthropic API.",
     result: "Team-built prediction prototype",
     links: [
-      { label: "tec.mx ↗", url: "https://tec.mx/es?srsltid=AfmBOoqPGWyoWmG1buYFrOJbOrpRPHUzYojx5kRDs04_imKgRJYOjoNE" },
       { label: "deere.com ↗", url: "https://www.deere.com.mx/es/" },
+      { label: "tec.mx ↗", url: "https://tec.mx/es?srsltid=AfmBOoqPGWyoWmG1buYFrOJbOrpRPHUzYojx5kRDs04_imKgRJYOjoNE" },
       { label: "LINKEDIN ↗", url: "https://www.linkedin.com/feed/update/urn:li:activity:7469113495951712256/" },
       { label: "prediction-center.vercel.app ↗", url: "https://prediction-center.vercel.app" },
       { label: "REPO ↗", url: "https://github.com/Fernando-Mauro/hacka-codex" },
@@ -53,7 +53,7 @@ const achievements: Achievement[] = [
     date: "2026.05.29",
     title: "Platanus Build Night",
     context: "Adversarial QA agent that finds business-logic bugs and writes the regression test. Claude explores, infers invariants, breaks them, and auto-generates Playwright tests. Built solo in 12h. Next.js 16 · TypeScript · Anthropic SDK · SSE streaming.",
-    result: "1 of 25 selected hackers",
+    result: "1 of 25 selected hackers around Mexico",
     links: [
       { label: "platanus.com ↗", url: "https://platan.us" },
       { label: "antropic.com ↗", url: "https://www.anthropic.com" },
@@ -80,7 +80,7 @@ const achievements: Achievement[] = [
     context: "Completed a specialized technical program focused on software (Python, C, C++, Java, PHP, SQL, HTML/CSS/JS).",
     result: "Certified",
     links: [
-      { label: "cetis15.edu.mx ↗", url: "https://www.cetis15.edu.mx" },
+      { label: "cetis15.edu.mx ↗", url: "https://www.cetis15.edu.mx/carreras/perfil/programacion" },
     ],
   },
   {
@@ -110,7 +110,7 @@ const achievements: Achievement[] = [
     context: "Computación del Golfo — software engineering and programming certification.",
     result: "Certified",
     links: [
-      { label: "cg.edu.mx ↗", url: "https://www.cg.edu.mx" },
+      { label: "cg.edu.mx ↗", url: "https://www.cg.edu.mx/curso-programacion" },
     ],
   },
 ];
