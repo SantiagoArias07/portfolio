@@ -21,18 +21,34 @@ interface Achievement {
 
 const achievements: Achievement[] = [
     {
+    id: "ach-8",
+    date: "2026.06.05",
+    title: "Concienc.IA Hackathon",
+    context: "FloodSense — Urban flood risk intelligence platform for Mexico City. XGBoost agents predict rainfall intensity and flood severity per zone; IBM watsonx generates plain-language alerts for citizens and action protocols for authorities. Works across the 60% of neighborhoods with no sensor data. React · Leaflet · FastAPI · XGBoost · IBM watsonx · Groq/Llama 3.3.",
+    result: "1st place — Water challenge track",
+    links: [
+      { label: "tec.mx ↗", url: "https://tec.mx/es?srsltid=AfmBOoqPGWyoWmG1buYFrOJbOrpRPHUzYojx5kRDs04_imKgRJYOjoNE" },
+      { label: "ibm.com ↗", url: "https://www.ibm.com/mx-es" },
+      { label: "LINKEDIN ↗", url: "https://www.linkedin.com/feed/update/urn:li:activity:7471744461895569408/" },
+      { label: "floodsensetec.vercel.app ↗", url: "https://floodsensetec.vercel.app" },
+      { label: "REPO ↗", url: "https://github.com/SantiagoArias07/hack-conciencia" },
+    ],
+  },
+  {
     id: "ach-7",
     date: "2026.06.01",
-    title: "CODEX Hackathon — John Deere × Tec",
+    title: "CODEX Hackathon",
     context: "FieldLoop — Monte Carlo harvest decision engine that recommends robust crop sequencing under weather uncertainty. Data-calibrated simulation + Regret Meter. Built with team. Next.js 16 · FastAPI · numpy · Anthropic API.",
-    result: "In progress",
+    result: "Team-built prediction prototype",
     links: [
-      { label: "prediction-center.vercel.app ↗", url: "https://prediction-center.vercel.app" },
+      { label: "tec.mx ↗", url: "https://tec.mx/es?srsltid=AfmBOoqPGWyoWmG1buYFrOJbOrpRPHUzYojx5kRDs04_imKgRJYOjoNE" },
       { label: "deere.com ↗", url: "https://www.deere.com.mx/es/" },
+      { label: "LINKEDIN ↗", url: "https://www.linkedin.com/feed/update/urn:li:activity:7469113495951712256/" },
+      { label: "prediction-center.vercel.app ↗", url: "https://prediction-center.vercel.app" },
       { label: "REPO ↗", url: "https://github.com/Fernando-Mauro/hacka-codex" },
     ],
   },
-    {
+  {
     id: "ach-6",
     date: "2026.05.29",
     title: "Platanus Build Night",
