@@ -30,24 +30,24 @@ const projects: Project[] = [
     year: "2026",
     stack: ["React 18 + Vite", "TailwindCSS", "Framer Motion", "TanStack Query", "FastAPI", "PostgreSQL", "Groq AI", "Vitest"],
     problem:
-      "People in Mexico facing gender-based violence, disability, or social exclusion had no single trusted place to find confidential orientation on their rights, locate nearby services, or access legal guidance without creating an account.",
+      "People in Mexico facing violence, disability, or social exclusion had no single trusted place to find confidential orientation on their rights, locate nearby services, or access legal guidance without creating an account.",
     solution:
       "AI assistant trained on Mexican human rights law with crisis detection and emergency hotlines. Interactive map of 200+ verified resources (shelters, legal aid, health). FastAPI + PostgreSQL on Railway, React + TanStack Query on Vercel. 23 Vitest tests. Built for EduMakers × Tec de Monterrey.",
     deployUrl: "https://safeguide-edumakers.vercel.app",
     repoUrl: "https://github.com/SantiagoArias07/edumakers-safe-guide",
   },
-    {
+  {
     id: "floodsense",
     name: "FloodSense",
-    role: "Solo Developer — Design & Engineering",
+    role: "Solo Developer — AI & Engineering",
     year: "2026",
-    stack: ["Next.js 14", "TypeScript", "Tailwind CSS", "Framer Motion", "Lenis", "Resend", "Server Actions"],
+    stack: ["React 18", "Leaflet", "Open-Meteo", "Groq", "Vercel Serverless", "Babel Standalone"],
     problem:
-      "SOSAC runs a 1,100 m² regenerated urban garden in Monterrey — a living lab for urban ecology. They needed a digital home that matched the quality of the physical space, not an off-the-shelf template.",
+      "Mexico City floods more often each year, but the data needed to manage that risk is sparse, fragmented, and unevenly distributed across neighborhoods. Traditional tools demand dense, clean datasets the city simply doesn't have — so entire colonias get no warning.",
     solution:
-      "Custom Next.js App Router site: 6 interactive SVG garden zones, 12-species filterable plant catalogue with static detail pages (SSG), community registration via Resend Server Actions, and an 8-species infinite-scroll fauna gallery. Light/dark mode via circular clip-path animation. SOSAC invited future collaboration post-delivery.",
-    deployUrl: "https://floodsense.vercel.app",
-    repoUrl: "https://github.com/SantiagoArias07/flood-sense",
+      "Urban flood risk digital twin: ~532 hexagons over a real CDMX map, hydrological model combining rainfall, topography, drainage, and social vulnerability, with a 6-hour scenario simulator. Spatial downscaling via Open-Meteo multi-point (20 stations, 1 call). AI fills missing data and quantifies uncertainty — distinguishing real, inferred, and uncertain risk on a confidence map. LLM-generated recommendations for citizens and authorities via Groq Serverless, with rule-based fallback. 1st place at Concienc.IA × IBM Hackathon 2026.",
+    deployUrl: "https://floodsensetec.vercel.app",
+    repoUrl: "https://github.com/SantiagoArias07/hack-conciencia",
   },
     {
     id: "weekfive",
@@ -63,20 +63,19 @@ const projects: Project[] = [
     repoUrl: "https://github.com/SantiagoArias07/week-five",
     previewBg: "#f8f9fa",
   },
-    {
-    id: "invariant",
-    name: "Invariant",
-    role: "Solo Developer — Software Engineering",
-    year: "2026",
-    stack: ["React 18", "TypeScript", "Vite", "Tailwind CSS", "Zustand", "Node.js", "Express", "SQLite", "JWT"],
-    problem:
-      "Week Five — Tec de Monterrey's peak of simultaneous deadlines — exposed a gap: no tool consolidated task tracking, exam scheduling, weighted GPA, and Pomodoro study sessions in a single workflow.",
-    solution:
-      "Bilingual (EN/ES) full-stack platform across 10 pages: full task CRUD with overdue detection, weighted GPA auto-calculation, exam-to-study-session generator, 25-min Pomodoro timer, and auto-generated notifications. Modular Zustand stores per resource. Express + SQLite API on Railway persistent Volume with JWT auth.",
-    deployUrl: "https://invariant.vercel.app",
-    repoUrl: "https://github.com/SantiagoArias07/invariant",
-    previewBg: "#f8f9fa",
-  },
+{
+  id: "invariant",
+  name: "Invariant",
+  role: "Solo Developer — AI Agents & Engineering",
+  year: "2026",
+  stack: ["Next.js 16", "React 19", "TypeScript", "Anthropic SDK", "Claude Sonnet 4.6", "SSE Streaming"],
+  problem:
+    "Traditional QA verifies that the happy path works — what you remembered to test. The real bugs hide in the business-logic invariants you forgot existed: a coupon redeemed twice, an order marked paid without capture, a negative quantity that flips a subtotal.",
+  solution:
+    "Autonomous adversarial QA agent. Claude explores the interface, infers the business rules that must always hold, then attacks each one until something contradicts itself. When it finds a violation, it generates a Playwright regression test so the bug is locked shut forever. Three auditable targets (e-commerce, SaaS billing, fintech), live SSE streaming with prompt caching, deterministic demo fallback so the demo never breaks. Built for Platanus Build Night CDMX — co-hosted with Anthropic.",
+  deployUrl: "https://invariant-mx.vercel.app",
+  repoUrl: "https://github.com/platanus-build-night/platanus-build-night-26-mx-SantiagoArias07",
+},
   {
     id: "climateroots",
     name: "ClimateRoots",

@@ -41,8 +41,8 @@ const credentials: Credential[] = [
       "High-performance competitive programming program at Tec de Monterrey, training elite students in algorithms, data structures, and problem-solving under contest conditions.",
     detail:
       "Rigorous weekly training sessions in competitive programming — ICPC-style problems, optimization challenges, and algorithmic thinking applied to real engineering constraints.",
-    year: "2025",
-    status: "Active",
+    year: "2026",
+    status: "Completed",
     tag: "PROGRAM",
     link: "https://www.linkedin.com/feed/update/urn:li:activity:7464387463122259968/",
     linkLabel: "LINKEDIN ↗",
