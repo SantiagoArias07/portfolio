@@ -23,20 +23,7 @@ interface Project {
 // and /public/projects/climateroots.png, then replace ProjectPreviewPlaceholder
 // with <Image src="/projects/weekfive.png" alt="WeekFive preview" fill className="object-cover" />
 const projects: Project[] = [
-  {
-    id: "climateroots",
-    name: "ClimateRoots",
-    role: "Solo Developer — Design & Engineering",
-    year: "2026",
-    stack: ["Next.js 14", "TypeScript", "Tailwind CSS", "Framer Motion", "Lenis", "Resend", "Server Actions"],
-    problem:
-      "SOSAC runs a 1,100 m² regenerated urban garden in Monterrey — a living lab for urban ecology. They needed a digital home that matched the quality of the physical space, not an off-the-shelf template.",
-    solution:
-      "Custom Next.js App Router site: 6 interactive SVG garden zones, 12-species filterable plant catalogue with static detail pages (SSG), community registration via Resend Server Actions, and an 8-species infinite-scroll fauna gallery. Light/dark mode via circular clip-path animation. SOSAC invited future collaboration post-delivery.",
-    deployUrl: "https://climateroots.vercel.app",
-    repoUrl: "https://github.com/SantiagoArias07/sosac-climate-roots",
-  },
-  {
+    {
     id: "safeguide",
     name: "SafeGuide",
     role: "Solo Developer — Full-stack & AI Integration",
@@ -49,7 +36,20 @@ const projects: Project[] = [
     deployUrl: "https://safeguide-edumakers.vercel.app",
     repoUrl: "https://github.com/SantiagoArias07/edumakers-safe-guide",
   },
-  {
+    {
+    id: "floodsense",
+    name: "FloodSense",
+    role: "Solo Developer — Design & Engineering",
+    year: "2026",
+    stack: ["Next.js 14", "TypeScript", "Tailwind CSS", "Framer Motion", "Lenis", "Resend", "Server Actions"],
+    problem:
+      "SOSAC runs a 1,100 m² regenerated urban garden in Monterrey — a living lab for urban ecology. They needed a digital home that matched the quality of the physical space, not an off-the-shelf template.",
+    solution:
+      "Custom Next.js App Router site: 6 interactive SVG garden zones, 12-species filterable plant catalogue with static detail pages (SSG), community registration via Resend Server Actions, and an 8-species infinite-scroll fauna gallery. Light/dark mode via circular clip-path animation. SOSAC invited future collaboration post-delivery.",
+    deployUrl: "https://floodsense.vercel.app",
+    repoUrl: "https://github.com/SantiagoArias07/flood-sense",
+  },
+    {
     id: "weekfive",
     name: "WeekFive",
     role: "Solo Developer — Software Engineering",
@@ -63,12 +63,41 @@ const projects: Project[] = [
     repoUrl: "https://github.com/SantiagoArias07/week-five",
     previewBg: "#f8f9fa",
   },
+    {
+    id: "invariant",
+    name: "Invariant",
+    role: "Solo Developer — Software Engineering",
+    year: "2026",
+    stack: ["React 18", "TypeScript", "Vite", "Tailwind CSS", "Zustand", "Node.js", "Express", "SQLite", "JWT"],
+    problem:
+      "Week Five — Tec de Monterrey's peak of simultaneous deadlines — exposed a gap: no tool consolidated task tracking, exam scheduling, weighted GPA, and Pomodoro study sessions in a single workflow.",
+    solution:
+      "Bilingual (EN/ES) full-stack platform across 10 pages: full task CRUD with overdue detection, weighted GPA auto-calculation, exam-to-study-session generator, 25-min Pomodoro timer, and auto-generated notifications. Modular Zustand stores per resource. Express + SQLite API on Railway persistent Volume with JWT auth.",
+    deployUrl: "https://invariant.vercel.app",
+    repoUrl: "https://github.com/SantiagoArias07/invariant",
+    previewBg: "#f8f9fa",
+  },
+  {
+    id: "climateroots",
+    name: "ClimateRoots",
+    role: "Solo Developer — Design & Engineering",
+    year: "2026",
+    stack: ["Next.js 14", "TypeScript", "Tailwind CSS", "Framer Motion", "Lenis", "Resend", "Server Actions"],
+    problem:
+      "SOSAC runs a 1,100 m² regenerated urban garden in Monterrey — a living lab for urban ecology. They needed a digital home that matched the quality of the physical space, not an off-the-shelf template.",
+    solution:
+      "Custom Next.js App Router site: 6 interactive SVG garden zones, 12-species filterable plant catalogue with static detail pages (SSG), community registration via Resend Server Actions, and an 8-species infinite-scroll fauna gallery. Light/dark mode via circular clip-path animation. SOSAC invited future collaboration post-delivery.",
+    deployUrl: "https://climateroots.vercel.app",
+    repoUrl: "https://github.com/SantiagoArias07/sosac-climate-roots",
+  },
 ];
 
 const projectImages: Record<string, string> = {
-  weekfive: "/projects/weekfive.png",
-  climateroots: "/projects/climateroots.png",
   safeguide: "/projects/safeguide.png", // TODO: add screenshot at public/projects/safeguide.png
+  floodsense: "/projects/floodsense.png",
+  weekfive: "/projects/weekfive.png",
+  invariant: "/projects/invariant.png",
+  climateroots: "/projects/climateroots.png",
 };
 
 const cardVariants: Variants = {
