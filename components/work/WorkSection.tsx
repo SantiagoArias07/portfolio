@@ -77,17 +77,17 @@ const projects: Project[] = [
   repoUrl: "https://github.com/platanus-build-night/platanus-build-night-26-mx-SantiagoArias07",
 },
   {
-    id: "climateroots",
-    name: "ClimateRoots",
-    role: "Solo Developer — Design & Engineering",
+    id: "tiza",
+    name: "Tiza",
+    role: "Solo Developer — Full-stack & Product Engineering",
     year: "2026",
-    stack: ["Next.js 14", "TypeScript", "Tailwind CSS", "Framer Motion", "Lenis", "Resend", "Server Actions"],
+    stack: ["Next.js 14", "TypeScript", "Express", "PostgreSQL", "JWT", "jsPDF", "Neon", "PWA"],
     problem:
-      "SOSAC runs a 1,100 m² regenerated urban garden in Monterrey — a living lab for urban ecology. They needed a digital home that matched the quality of the physical space, not an off-the-shelf template.",
+      "Mexican primary school teachers still manage grades in paper books — fragile, unrecoverable, and disconnected from the official SEP evaluation format. No affordable tool handled Mexico's campos formativos curriculum (Plan 2022) end to end.",
     solution:
-      "Custom Next.js App Router site: 6 interactive SVG garden zones, 12-species filterable plant catalogue with static detail pages (SSG), community registration via Resend Server Actions, and an 8-species infinite-scroll fauna gallery. Light/dark mode via circular clip-path animation. SOSAC invited future collaboration post-delivery.",
-    deployUrl: "https://climateroots.vercel.app",
-    repoUrl: "https://github.com/SantiagoArias07/sosac-climate-roots",
+      "Full-stack digital grade book: per-period evaluation with weighted criteria, three-state activity tracking, exam grading by correct answers, attendance calendar with absence alerts, and group analytics. Generates official SEP boletas and concentrados as print-ready PDFs. Automatic daily backups with 7-day history and optional GitHub mirror. Installable PWA with offline-resilient data layer. In active use by real teachers.",
+    deployUrl: "https://tiza-mx.vercel.app",
+    repoUrl: "https://github.com/SantiagoArias07/tiza",
   },
 ];
 
