@@ -96,7 +96,7 @@ const projectImages: Record<string, string> = {
   floodsense: "/projects/floodsense.png",
   weekfive: "/projects/weekfive.png",
   invariant: "/projects/invariant.png",
-  climateroots: "/projects/tiza.png",
+  tiza: "/projects/tiza.png",
 };
 
 const cardVariants: Variants = {
