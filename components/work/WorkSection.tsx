@@ -23,7 +23,23 @@ interface Project {
 // and /public/projects/climateroots.png, then replace ProjectPreviewPlaceholder
 // with <Image src="/projects/weekfive.png" alt="WeekFive preview" fill className="object-cover" />
 const projects: Project[] = [
-    {
+  // TODO: add ADIP meeting photo to public/projects/floodsense-adip.jpg
+  // and wire it as a secondary image / into the FloodSense card if the
+  // component supports it.
+  {
+    id: "floodsense",
+    name: "FloodSense",
+    role: "Solo Developer — Frontend Architecture & AI for Civic Tech",
+    year: "2026",
+    stack: ["React 18", "Leaflet", "Open-Meteo", "Groq", "Vercel Serverless", "Babel Standalone"],
+    problem:
+      "Mexico City floods more often each year, but the data needed to manage that risk is sparse, fragmented, and unevenly distributed across neighborhoods. Traditional tools demand dense, clean datasets the city simply doesn't have — so entire colonias get no warning.",
+    solution:
+      "Urban flood risk digital twin: ~532 hexagons over a real CDMX map, hydrological model combining rainfall, topography, drainage, and social vulnerability, with a 6-hour scenario simulator. Spatial downscaling via Open-Meteo multi-point (20 stations, 1 call). AI fills missing data and quantifies uncertainty — distinguishing real, inferred, and uncertain risk on a confidence map. LLM-generated recommendations for citizens and authorities via Groq Serverless, with rule-based fallback. What began as 1st place at the Concienc.IA × IBM Hackathon 2026 grew into a production-grade system developed alongside IBM and presented in person to Mexico City's ADIP — the Agencia Digital de Innovación Pública — as a decision-support tool for the city, carrying the work beyond the hackathon to real public-policy decision-makers.",
+    deployUrl: "https://floodsensetec.vercel.app",
+    repoUrl: "https://github.com/SantiagoArias07/hack-conciencia",
+  },
+  {
     id: "safeguide",
     name: "SafeGuide",
     role: "Solo Developer — Full-stack & AI Integration",
@@ -32,33 +48,20 @@ const projects: Project[] = [
     problem:
       "People in Mexico facing violence, disability, or social exclusion had no single trusted place to find confidential orientation on their rights, locate nearby services, or access legal guidance without creating an account.",
     solution:
-      "AI assistant trained on Mexican human rights law with crisis detection and emergency hotlines. Interactive map of 200+ verified resources (shelters, legal aid, health). FastAPI + PostgreSQL on Railway, React + TanStack Query on Vercel. 23 Vitest tests. Built for EduMakers × Tec de Monterrey.",
+      "AI assistant trained on Mexican human rights law with crisis detection and emergency hotlines. Interactive map of 200+ verified resources (shelters, legal aid, health). FastAPI on Render with a serverless Neon Postgres database, React + TanStack Query on Vercel. 23 Vitest tests. Built for EduMakers × Tec de Monterrey.",
     deployUrl: "https://safeguide-edumakers.vercel.app",
     repoUrl: "https://github.com/SantiagoArias07/edumakers-safe-guide",
-  },
-  {
-    id: "floodsense",
-    name: "FloodSense",
-    role: "Solo Developer — AI & Engineering",
-    year: "2026",
-    stack: ["React 18", "Leaflet", "Open-Meteo", "Groq", "Vercel Serverless", "Babel Standalone"],
-    problem:
-      "Mexico City floods more often each year, but the data needed to manage that risk is sparse, fragmented, and unevenly distributed across neighborhoods. Traditional tools demand dense, clean datasets the city simply doesn't have — so entire colonias get no warning.",
-    solution:
-      "Urban flood risk digital twin: ~532 hexagons over a real CDMX map, hydrological model combining rainfall, topography, drainage, and social vulnerability, with a 6-hour scenario simulator. Spatial downscaling via Open-Meteo multi-point (20 stations, 1 call). AI fills missing data and quantifies uncertainty — distinguishing real, inferred, and uncertain risk on a confidence map. LLM-generated recommendations for citizens and authorities via Groq Serverless, with rule-based fallback. 1st place at Concienc.IA × IBM Hackathon 2026.",
-    deployUrl: "https://floodsensetec.vercel.app",
-    repoUrl: "https://github.com/SantiagoArias07/hack-conciencia",
   },
     {
     id: "weekfive",
     name: "WeekFive",
     role: "Solo Developer — Software Engineering",
     year: "2026",
-    stack: ["React 18", "TypeScript", "Vite", "Tailwind CSS", "Zustand", "Node.js", "Express", "SQLite", "JWT"],
+    stack: ["React 18", "TypeScript", "Vite", "Tailwind CSS", "Zustand", "Node.js", "Express", "Turso", "JWT"],
     problem:
       "Week Five — Tec de Monterrey's peak of simultaneous deadlines — exposed a gap: no tool consolidated task tracking, exam scheduling, weighted GPA, and Pomodoro study sessions in a single workflow.",
     solution:
-      "Bilingual (EN/ES) full-stack platform across 10 pages: full task CRUD with overdue detection, weighted GPA auto-calculation, exam-to-study-session generator, 25-min Pomodoro timer, and auto-generated notifications. Modular Zustand stores per resource. Express + SQLite API on Railway persistent Volume with JWT auth.",
+      "Bilingual (EN/ES) full-stack platform across 10 pages: full task CRUD with overdue detection, weighted GPA auto-calculation, exam-to-study-session generator, 25-min Pomodoro timer, and auto-generated notifications. Modular Zustand stores per resource. Express API on Render backed by Turso (libSQL edge database) with JWT auth.",
     deployUrl: "https://weekfive-tec.vercel.app",
     repoUrl: "https://github.com/SantiagoArias07/week-five",
     previewBg: "#f8f9fa",
