@@ -21,7 +21,7 @@ const META = [
   { label: "PROGRAM", value: "B.S. in Computer Science and Technology" },
   { label: "INSTITUTION", value: "Tec de Monterrey" },
   { label: "GRADUATION", value: "2029 (expected)" },
-  { label: "STATUS", value: "Open to frontend-focused software engineering roles." },
+  { label: "STATUS", value: "Open to full-stack software engineering roles." },
   { label: "LANGUAGES", value: "ES / EN" },
 ];
 

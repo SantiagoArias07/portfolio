@@ -16,6 +16,7 @@ interface Project {
   solution: string;
   deployUrl: string | null;
   repoUrl: string | null;
+  linkedinUrl?: string;
   previewBg?: string;
 }
 
@@ -29,7 +30,7 @@ const projects: Project[] = [
   {
     id: "floodsense",
     name: "FloodSense",
-    role: "Solo Developer — Frontend Architecture & AI for Civic Tech",
+    role: "Solo Developer — Full-stack & AI for Civic Tech",
     year: "2026",
     stack: ["React 18", "Leaflet", "Open-Meteo", "Groq", "Vercel Serverless", "Babel Standalone"],
     problem:
@@ -38,6 +39,7 @@ const projects: Project[] = [
       "Urban flood risk digital twin: ~532 hexagons over a real CDMX map, hydrological model combining rainfall, topography, drainage, and social vulnerability, with a 6-hour scenario simulator. Spatial downscaling via Open-Meteo multi-point (20 stations, 1 call). AI fills missing data and quantifies uncertainty — distinguishing real, inferred, and uncertain risk on a confidence map. LLM-generated recommendations for citizens and authorities via Groq Serverless, with rule-based fallback. What began as 1st place at the Concienc.IA × IBM Hackathon 2026 grew into a production-grade system developed alongside IBM and presented in person to Mexico City's ADIP — the Agencia Digital de Innovación Pública — as a decision-support tool for the city, carrying the work beyond the hackathon to real public-policy decision-makers.",
     deployUrl: "https://floodsensetec.vercel.app",
     repoUrl: "https://github.com/SantiagoArias07/hack-conciencia",
+    linkedinUrl: "https://www.linkedin.com/posts/diana-nayibi-a-065348225_inteligenciaartificial-innovacionpublica-activity-7493862804567875605-E96T",
   },
   {
     id: "safeguide",
@@ -262,6 +264,17 @@ function ProjectCard({
             <span className="font-mono text-xs text-[var(--text-tertiary)] tracking-widest">
               REPO // TODO
             </span>
+          )}
+          {project.linkedinUrl && (
+            <a
+              href={project.linkedinUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-xs text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors tracking-widest"
+              data-cursor="hover"
+            >
+              LINKEDIN ↗
+            </a>
           )}
         </div>
       </div>
