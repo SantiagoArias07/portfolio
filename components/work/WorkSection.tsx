@@ -54,7 +54,20 @@ const projects: Project[] = [
     deployUrl: "https://safeguide-edumakers.vercel.app",
     repoUrl: "https://github.com/SantiagoArias07/edumakers-safe-guide",
   },
-    {
+  {
+    id: "invariant",
+    name: "Invariant",
+    role: "Solo Developer — AI Agents & Engineering",
+    year: "2026",
+    stack: ["Next.js 16", "React 19", "TypeScript", "Anthropic SDK", "Claude Sonnet 4.6", "SSE Streaming"],
+    problem:
+      "Traditional QA verifies that the happy path works — what you remembered to test. The real bugs hide in the business-logic invariants you forgot existed: a coupon redeemed twice, an order marked paid without capture, a negative quantity that flips a subtotal.",
+    solution:
+      "Autonomous adversarial QA agent. Claude explores the interface, infers the business rules that must always hold, then attacks each one until something contradicts itself. When it finds a violation, it generates a Playwright regression test so the bug is locked shut forever. Three auditable targets (e-commerce, SaaS billing, fintech), live SSE streaming with prompt caching, deterministic demo fallback so the demo never breaks. Built for Platanus Build Night CDMX — co-hosted with Anthropic.",
+    deployUrl: "https://invariant-mx.vercel.app",
+    repoUrl: "https://github.com/platanus-build-night/platanus-build-night-26-mx-SantiagoArias07",
+  },
+  {
     id: "weekfive",
     name: "WeekFive",
     role: "Solo Developer — Software Engineering",
@@ -68,19 +81,6 @@ const projects: Project[] = [
     repoUrl: "https://github.com/SantiagoArias07/week-five",
     previewBg: "#f8f9fa",
   },
-{
-  id: "invariant",
-  name: "Invariant",
-  role: "Solo Developer — AI Agents & Engineering",
-  year: "2026",
-  stack: ["Next.js 16", "React 19", "TypeScript", "Anthropic SDK", "Claude Sonnet 4.6", "SSE Streaming"],
-  problem:
-    "Traditional QA verifies that the happy path works — what you remembered to test. The real bugs hide in the business-logic invariants you forgot existed: a coupon redeemed twice, an order marked paid without capture, a negative quantity that flips a subtotal.",
-  solution:
-    "Autonomous adversarial QA agent. Claude explores the interface, infers the business rules that must always hold, then attacks each one until something contradicts itself. When it finds a violation, it generates a Playwright regression test so the bug is locked shut forever. Three auditable targets (e-commerce, SaaS billing, fintech), live SSE streaming with prompt caching, deterministic demo fallback so the demo never breaks. Built for Platanus Build Night CDMX — co-hosted with Anthropic.",
-  deployUrl: "https://invariant-mx.vercel.app",
-  repoUrl: "https://github.com/platanus-build-night/platanus-build-night-26-mx-SantiagoArias07",
-},
   {
     id: "tiza",
     name: "Tiza",
