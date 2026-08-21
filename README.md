@@ -52,7 +52,7 @@ Personal portfolio site. Dark techy aesthetic, one-page scroll, built as a work 
 | 01 | **Hero** | R3F distorted wireframe icosahedron, mouse-reactive rotation, glitch on name |
 | 02 | **About** | Editorial 2/3 + metadata sidebar |
 | 03 | **Credentials** | Gallagher Foundation + CODEX — active, with external links |
-| 04 | **Selected Work** | ClimateRoots + WeekFive — screenshots, live URLs, repo links, clickable images |
+| 04 | **Selected Work** | FloodSense, SafeGuide, WeekFive, Invariant, Tiza — full-stack projects with screenshots, live URLs, repo links, clickable images |
 | 05 | **Hackathons** | Capital One 2026, Gen Técnico 2025/2024, Technical Diploma, Programming Cert |
 | 06 | **Stack** | Languages · Frontend · App & DB · Tooling · Currently Building With |
 | 07 | **Contact** | Email + copy, GitHub, LinkedIn, CV |
@@ -93,7 +93,7 @@ lib/
   animations.ts          # EASE_OUT typed tuple, shared Variants
   hooks/                 # useReducedMotion · useScrollProgress
 
-public/projects/         # climateroots.png · weekfive.png
+public/projects/         # floodsense · safeguide · weekfive · invariant · tiza (.png)
 ```
 
 ---

@@ -54,7 +54,7 @@ export function AboutSection() {
             className="text-lg sm:text-xl text-[var(--text-secondary)] leading-relaxed mb-6 font-light"
             variants={fadeUp}
           >
-            I&apos;m Santiago — a Computer Science and Technology student at Tec de Monterrey focused on software engineering with a strong emphasis on frontend craft. I care about the 200ms that makes a transition feel right, the API design that makes a codebase survivable, and the product decision that makes both matter.
+            I&apos;m Santiago — a Computer Science and Technology student at Tec de Monterrey focused on software engineering across the full stack, front to back. I care about the 200ms that makes a transition feel right, the API design that makes a codebase survivable, and the product decision that makes both matter.
           </motion.p>
 
           <motion.p
@@ -76,7 +76,7 @@ export function AboutSection() {
               Gallagher Foundation scholarship
             </span>
             , one of Mexico&apos;s most selective merit awards. Currently looking for a
-            frontend-focused software engineering role where craft and ambition are both
+            full-stack software engineering role where craft and ambition are both
             on the table.
           </motion.p>
         </div>

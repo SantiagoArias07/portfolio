@@ -51,7 +51,7 @@ const stack: StackCategory[] = [
     items: [
       { name: "Git / GitHub", context: "feature branches, conventional commits" },
       { name: "Figma", context: "design → code handoff and component specs" },
-      { name: "Vercel", context: "frontend deploy, preview, and edge config" },
+      { name: "Vercel", context: "app deploy, preview, and edge config" },
       { name: "Railway", context: "backend + persistent volume hosting" },
     ],
   },

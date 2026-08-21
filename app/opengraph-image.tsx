@@ -90,7 +90,7 @@ export default function OGImage() {
               fontWeight: 500,
             }}
           >
-            SOFTWARE ENGINEER · FRONTEND-FOCUSED
+            SOFTWARE ENGINEER · FULL-STACK
           </div>
           <div style={{ color: "#6b6b6b", fontSize: 13, letterSpacing: "0.1em" }}>
             B.S. Computer Science and Technology · Tec de Monterrey · 2029
